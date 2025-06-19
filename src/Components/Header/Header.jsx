@@ -51,11 +51,11 @@ function Header() {
             <div className='nav-path'>
               <NavLink to="/" exact activeClassName="active">About</NavLink>
               <NavLink to="/projects" activeClassName="active">Projects</NavLink>
-              <NavLink to="/certificats" activeClassName="active">Certificates</NavLink>
+              <NavLink to="/certificates" activeClassName="active">Certificates</NavLink>
               <NavLink to="/FeedBack" activeClassName="active">FeedBack</NavLink>
             </div>
             <div className="nav-icons">
-              <NavLink to="https://github.com/Ali-EL-Badry" className="github" target="_blank" rel="noopener noreferrer">
+              <NavLink to="https://github.com/Aly-EL-Badry" className="github" target="_blank" rel="noopener noreferrer">
                 <FaGithub size={24} />
               </NavLink>
               <NavLink to="https://www.linkedin.com/in/aly-el-badry/" className="linkedin" target="_blank" rel="noopener noreferrer">
@@ -75,10 +75,10 @@ function Header() {
         <nav className="sidebar-nav">
           <NavLink to="/" exact activeClassName="active" onClick={toggleSidebar}>About</NavLink>
           <NavLink to="/projects" activeClassName="active" onClick={toggleSidebar}>Projects</NavLink>
-          <NavLink to="/certificats" activeClassName="active" onClick={toggleSidebar}>Certificates</NavLink>
+          <NavLink to="/certificates" activeClassName="active" onClick={toggleSidebar}>Certificates</NavLink>
           <NavLink to="/FeedBack" activeClassName="active" onClick={toggleSidebar}>FeedBack</NavLink>
           <div className="nav-icons">
-            <NavLink to="https://github.com/Ali-EL-Badry" className="github" target="_blank" rel="noopener noreferrer">
+            <NavLink to="https://github.com/Aly-EL-Badry" className="github" target="_blank" rel="noopener noreferrer">
               <FaGithub size={24} />
             </NavLink>
             <NavLink to="https://www.linkedin.com/in/aly-el-badry/" className="linkedin" target="_blank" rel="noopener noreferrer">

@@ -6,20 +6,14 @@ import { motion } from "framer-motion";
 
 
 const videoBg ="https://res.cloudinary.com/dqktuc5ej/video/upload/v1745161991/vi_bfhz8l.mp4"; 
-const Profile = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159828/lol_nyrplz.webp";
+const Profile = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1748174620/professional_zpcarn.jpg";
 const cairo = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159950/Cairo_university_mghkji.webp";
 const depi = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159825/depi_logo_rjfmhm.webp";
 const star = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/star_henlap.webp";
 const event = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159833/event_hd39ee.webp";
 const h = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/huawei_thxmng.webp";
-const pothole = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745155110/pothole_detection_1_nqaolw.webp";
-const fasion =  "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745155111/fasion_twfrhh.webp";
-const vole = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745155111/vole_iyqgwl.webp";
-const hc = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158335/html_clwgwq.webp"
-const alx = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158334/alx_up9vdv.webp"
-const dotpy = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158331/dotpy_jefwd4.webp"
-const hcia = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158338/HCIA_cvu2ap.webp"
 const virtufirm = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159828/virtufirm_o9hoog.webp"
+const outlier = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1749665520/CTA-8_itxtjp.png"
 
 const Home = () =>{
   const handleScroll = () => {
@@ -42,32 +36,6 @@ const Home = () =>{
     },
   ];
 
-  const virtufirmFocus = [
-    {
-      id: 1,
-      icon: <FaBrain className="virtufirm-icon" />,
-      title: "AI Development",
-      description: "Building intelligent applications and solutions"
-    },
-    {
-      id: 2,
-      icon: <FaReact className="virtufirm-icon" />,
-      title: "Web Development",
-      description: "Creating modern, responsive web applications"
-    },
-    {
-      id: 3,
-      icon: <FaMobile className="virtufirm-icon" />,
-      title: "Mobile Development",
-      description: "Cross-platform mobile apps with Flutter"
-    },
-    {
-      id: 4,
-      icon: <FaTrophy className="virtufirm-icon" />,
-      title: "Competitions",
-      description: "Hosting tech challenges and hackathons"
-    },
-  ];
 
   return (
     <>
@@ -77,148 +45,361 @@ const Home = () =>{
         </video>
         <div className="content">
           <div className="text">
-            <p className="welcome">Welcome to My Portfolio,</p>
-            <p className='Name'>I am Aly El-Badry</p>
-            <p className="desc">An innovative-minded Data Scientist and Full-Stack Developer, aspiring to become an AI Engineer, blending creativity with technology to build intelligent solutions</p>
-            <a className="btn" href="#contact" >Contact me</a>
-            <a href="https://drive.google.com/file/d/1j1OgHYgD21k0HwfD-f5C0zm7-Iw0eXry/view?usp=sharing" className="btn">Download CV</a>
+            <p className="welcome">Exploring My Digital Universe</p>
+            <p className='Name'>Aly El-Badry</p>
+            <div className="role-container">
+              <span className="role">AI Engineer</span>
+              <span className="role-separator">|</span>
+              <span className="role">Full-Stack Developer</span>
+              <span className="role-separator">|</span>
+              <span className="role">Data Scientist</span>
+            </div>
+            <p className="desc">
+              Transforming ideas into intelligent solutions through the power of
+              <span className="highlight"> AI</span> and
+              <span className="highlight"> Innovation</span>
+            </p>
+            <div className="cta-buttons">
+              <a className="btn" href="#contact">
+                <span>Contact me</span>
+                <FaArrowRight className="btn-icon" />
+              </a>
+              <a href="https://drive.google.com/file/d/1j1OgHYgD21k0HwfD-f5C0zm7-Iw0eXry/view?usp=sharing" className="btn">
+                <span>Download CV</span>
+                <FaArrowRight className="btn-icon" />
+              </a>
+            </div>
           </div>
         </div>
 
         <div className="arrow">
-            <div className="down-arrow">
-              <button className="arr" onClick={handleScroll}>
-                <FaAngleDoubleDown className="aa" />
-              </button>
-            </div>
+          <div className="down-arrow">
+            <button className="arr" onClick={handleScroll}>
+              <FaAngleDoubleDown className="aa" />
+            </button>
+          </div>
         </div>
-
       </div>
       
-      <div className='title' id="about">About Aly El-Badry</div>
+      <div className='title' id="about">About Me</div>
       <hr />
-      <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="about">
+      <div className='about'>
         <div className='about-content'>
-          <div className="about-text">
-            <p className="main-text">A second-year student at Cairo University's Faculty of Computer Science and Artificial Intelligence, Aly El-Badry is a dedicated Data Scientist and Full-Stack Developer with a strong passion for advancing toward a career as an AI Engineer.</p>
-            <p className="subtext">
-              <div className="sub">
-                <div className="arrow-container">
-                  <FaArrowRight className="arrow-icon" />
-                </div>
-                <p className="factors">Experienced freelancer on platforms such as Upwork and 5amsat, offering expertise in Data Science and web development.</p>
+          <motion.div
+            initial={{ y: 50, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}  
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }} 
+            className="about-left">
+            <div className="tech-stack">
+              <div className="tech-item">
+                <FaBrain className="tech-icon" />
+                <span>AI Engineer</span>
               </div>
-              <div className="sub">
-                <div className="arrow-container">
-                  <FaArrowRight className="arrow-icon" />
-                </div>
-                <p className="factors">Currently contributing as a Data Scientist in the Digital Egypt Pioneers Initiative (DEPI), guided by the strategic vision of AMIT.</p>
+              <div className="tech-item">
+                <FaCode className="tech-icon" />
+                <span>Full-Stack Dev</span>
               </div>
-              <div className="sub">
-                <div className="arrow-container">
-                  <FaArrowRight className="arrow-icon" />
-                </div>
-                <p className="factors">Former Student Union member with a proven track record in organizing large-scale events, including the Cairo University Student Graduation Party.</p>
+              <div className="tech-item">
+                <FaDatabase className="tech-icon" />
+                <span>Data Scientist</span>
               </div>
-              <div className="sub">
-                <div className="arrow-container">
-                  <FaArrowRight className="arrow-icon" />
+            </div>
+            <div className="highlights">
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaRocket />
                 </div>
-                <p className="factors">Active AI member in Star Union and a recognized Dataset expert on Kaggle, showcasing a commitment to innovation and collaboration in the field of artificial intelligence.</p>
+                <div className="highlight-content">
+                  <h3>AI Innovation</h3>
+                  <p>Leading AI initiatives at Star Union & DEPI, specializing in computer vision and NLP</p>
+                </div>
               </div>
-            </p>
-          </div>
-          <img src={Profile} alt="profile-img" className='My-Image' />
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaTrophy />
+                </div>
+                <div className="highlight-content">
+                  <h3>Project Expert</h3>
+                  <p>Recognized Dataset Expert on Kaggle and work as freelancer on Upwork and Khamsat</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaProjectDiagram />
+                </div>
+                <div className="highlight-content">
+                  <h3>VirtuFirm Founder</h3>
+                  <p>Leading a community of tech enthusiasts and driving the community's vision forward.</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaUsers />
+                </div>
+                <div className="highlight-content">
+                  <h3>Event Organizer</h3>
+                  <p>Organizing AI workshops and university tech events</p>
+                </div>
+              </div>
+            </div>
+            <div className="skills-grid">
+              <div className="skill-category">
+                <h4>AI & ML</h4>
+                <div className="skill-tags">
+                  <span>YOLO</span>
+                  <span>PyTorch</span>
+                  <span>TensorFlow</span>
+                  <span>NLP</span>
+                  <span>Computer Vision</span>
+                  <span>Machine Learning</span>
+                </div>
+              </div>
+              <div className="skill-category">
+                <h4>Tech</h4>
+                <div className="skill-tags">
+                  <span>React</span>
+                  <span>Django</span>
+                  <span>Tailwind</span>
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>C++</span>
+                  <span>Java</span>
+                  <span>Qt</span>
+                  <span>C#</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+          <div className="about-divider"></div>
+          <motion.div 
+            initial={{ x: 50, opacity: 0 }}
+            whileInView={{ x: 0, opacity: 1 }}  
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeInOut" }} 
+            className="about-right">
+            <div className="profile-image-container">
+              <img src={Profile} alt="Aly El-Badry - AI Engineer & Full-Stack Developer" className='My-Image' />
+              <div className="profile-overlay">
+                <div className="profile-info">
+                  <h2>Aly El-Badry</h2>
+                  <p>AI Engineer & Full-Stack Developer</p>
+                  <div className="profile-stats">
+                    <div className="stat">
+                      <span className="stat-number">1+</span>
+                      <span className="stat-label">Years Experience</span>
+                    </div>
+                    <div className="stat">
+                      <span className="stat-number">20+</span>
+                      <span className="stat-label">Projects</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
-      </motion.div>
+      </div>
 
 
       <div className="title">Experience</div>
       <hr />
-      <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="exp">
-        <div className="sec">
-          <div className="comp-head">
-            <div className="comp-name">
-              <h2>Digital Egypt Pioneers Initiative-DEPI</h2>
-              <p className="job">Data Scientist - Internship</p>
+      <div className="experience-container">
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}  
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }} 
+          className="experience-card"
+        >
+          <div className="experience-content">
+            <div className="experience-main">
+              <div className="experience-header">
+                <div className="company-info">
+                  <h2>VirtuFirm</h2>
+                  <div className="job-info">
+                    <p className="job-title">Founder & Tech Visionary</p>
+                    <p className="duration">January 2025 - Present</p>
+                  </div>
+                </div>
+              </div>
+              <div className="experience-details">
+                <h3>Key Responsibilities & Achievements</h3>
+                <ul>
+                  <li>Founded and lead a thriving tech community focused on innovation and knowledge sharing</li>
+                  <li>Organize and conduct AI workshops and tech events for community members</li>
+                  <li>Drive the community's vision and growth through strategic initiatives</li>
+                  <li>Mentor aspiring developers and AI enthusiasts in their tech journey</li>
+                </ul>
+              </div>
             </div>
-            <p>October 2024 - Present</p>
-          </div>
-          <div className='college-content com'>
-            <hr />
-            <div className="headlist">Key Takeaways:</div>
-            <ul>
-              <li>Developed and deployed machine learning models for real-world applications.</li>
-              <li>Performed data cleaning, preprocessing, and feature engineering for improved model accuracy.</li>
-              <li>Worked with large datasets to extract meaningful insights and build predictive analytics solutions.</li>
-              <li>Collaborated with a team of professionals to solve data-driven challenges.</li>
-              <li>Enhanced proficiency in Python, TensorFlow, and data visualization tools.</li>
-            </ul>
-          </div>
-        </div>
-        <motion.img src={depi} alt="" initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }} viewport={{ once: true, amount: 0.3 }}transition={{ duration: 0.8, ease: "easeOut" }} />
-      </motion.div>
-      <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="exp">
-        <div className="sec">
-          <div className="comp-head">
-            <div className="comp-name">
-              <h2>Huawei ICT Academy</h2>
-              <p className="job">Data Scientist - Internship</p>
+            <div className="company-logo">
+              <motion.img 
+                src={virtufirm} 
+                alt="VirtuFirm Logo" 
+                initial={{ scale: 0.8, opacity: 0 }} 
+                whileInView={{ scale: 1, opacity: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5 }}
+              />
             </div>
-            <p>July 2024 - August 2024</p>
           </div>
-          <div className='college-content com'>
-            <hr />
-            <div className="headlist">Key Takeaways:</div>
-            <ul>
-            <li>Developed and deployed machine learning models for real-world applications.</li>
-            <li>Conducted data cleaning, preprocessing, and feature engineering to enhance model accuracy.</li>
-            <li>Analyzed large datasets to extract meaningful insights and build predictive analytics solutions.</li>
-            <li>Collaborated with a team of professionals to solve complex data-driven challenges.</li>
-            <li>Strengthened expertise in Python, TensorFlow, and data visualization tools.</li>
-          </ul>
+        </motion.div>
+
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}  
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }} 
+          className="experience-card"
+        >
+          <div className="experience-content">
+            <div className="experience-main">
+              <div className="experience-header">
+                <div className="company-info">
+                  <h2>Digital Egypt Pioneers Initiative-DEPI</h2>
+                  <div className="job-info">
+                    <p className="job-title">Data Scientist - Internship</p>
+                    <p className="duration">October 2024 - June 2025</p>
+                  </div>
+                </div>
+              </div>
+              <div className="experience-details">
+                <h3>Key Responsibilities & Achievements</h3>
+                <ul>
+                  <li>Developed and deployed ML models for real-world applications</li>
+                  <li>Implemented data preprocessing and feature engineering techniques</li>
+                  <li>Created Satellitor, a top-ranked computer vision project in the initiative</li>
+                  <li>Collaborated with professionals on data-driven solutions</li>
+                </ul>
+              </div>
+            </div>
+            <div className="company-logo">
+              <motion.img 
+                src={depi} 
+                alt="DEPI Logo" 
+                initial={{ scale: 0.8, opacity: 0 }} 
+                whileInView={{ scale: 1, opacity: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5 }}
+              />
+            </div>
           </div>
-        </div>
-        <motion.img src={h} alt="" initial={{ x: 100, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}viewport={{ once: true, amount: 0.3 }}transition={{ duration: 0.8, ease: "easeOut" }}/>
-      </motion.div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}  
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }} 
+          className="experience-card"
+        >
+          <div className="experience-content">
+            <div className="experience-main">
+              <div className="experience-header">
+                <div className="company-info">
+                  <h2>Huawei ICT Academy</h2>
+                  <div className="job-info">
+                    <p className="job-title">Data Scientist - Internship</p>
+                    <p className="duration">July 2024 - August 2024</p>
+                  </div>
+                </div>
+              </div>
+              <div className="experience-details">
+                <h3>Key Responsibilities & Achievements</h3>
+                <ul>
+                  <li>Developed ML models and implemented data preprocessing techniques</li>
+                  <li>Analyzed large datasets to build predictive analytics solutions</li>
+                  <li>Enhanced expertise in Python and TensorFlow frameworks</li>
+                  <li>Collaborated on complex data-driven challenges</li>
+                </ul>
+              </div>
+            </div>
+            <div className="company-logo">
+              <motion.img 
+                src={h} 
+                alt="Huawei Logo" 
+                initial={{ scale: 0.8, opacity: 0 }} 
+                whileInView={{ scale: 1, opacity: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </div>
+        </motion.div>
+
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}  
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, ease: "easeOut" }} 
+          className="experience-card"
+        >
+          <div className="experience-content">
+            <div className="experience-main">
+              <div className="experience-header">
+                <div className="company-info">
+                  <h2>Outlier</h2>
+                  <div className="job-info">
+                    <p className="job-title">AI Trainee - Part Time</p>
+                    <p className="duration">October 2024 - Present</p>
+                  </div>
+                </div>
+              </div>
+              <div className="experience-details">
+                <h3>Key Responsibilities & Achievements</h3>
+                <ul>
+                  <li>Working on advanced AI and ML model development</li>
+                  <li>Implementing cutting-edge AI technologies</li>
+                  <li>Collaborating with AI professionals on real-world applications</li>
+                  <li>Learning and optimizing AI methodologies</li>
+                </ul>
+              </div>
+            </div>
+            <div className="company-logo">
+              <motion.img 
+                src={outlier} 
+                alt="Outlier Logo" 
+                initial={{ scale: 0.8, opacity: 0 }} 
+                whileInView={{ scale: 1, opacity: 1 }} 
+                viewport={{ once: true }} 
+                transition={{ duration: 0.5 }}
+              />
+            </div>
+          </div>
+        </motion.div>
+      </div>
 
       <div className="title">Education</div>
       <hr />
       <motion.div initial={{ y: 100, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}  
         viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="about">
-        <div className='about-content'>
-          <img src={cairo} alt="Cairo university" />
-          <div className="college-details">
-            <div className="college-head">
+        transition={{ duration: 0.6, ease: "easeOut" }} className="education-section">
+        <div className='education-content'>
+          <img src={cairo} alt="Cairo university" className="education-image" />
+          <div className="education-details">
+            <div className="education-header">
               <h2>Cairo University, Computer Science & Artificial Intelligence</h2>
-              <p>October 2023 - Present</p>
+              <p className="education-period">October 2023 - Present</p>
             </div>
-            <div className="college-content">
-              <div className="main">
+            <div className="education-body">
+              <div className="education-description">
                 Kickstart your journey in programming with a strong foundation in essential concepts. 
                 This program emphasizes problem-solving, time management, and teamwork, providing an 
                 optimal environment for beginners to excel in the field of programming.
               </div>
-              <hr />
-              <div className="headlist">Key Takeaways:</div>
-              <ul>
-                <li>Develop teamwork and project management skills</li>
-                <li>Gain proficiency in programming languages such as C++, Java, and Python</li>
-                <li>Master Object-Oriented Programming (OOP), data structures, and algorithms</li>
-                <li>Explore web development and database management</li>
-                <li>Build a solid foundation in your preferred specialization</li>
-              </ul>
+              <hr className="education-divider" />
+              <div className="education-highlights">
+                <h3 className="highlights-title">Key Takeaways:</h3>
+                <ul className="highlights-list">
+                  <li>Develop teamwork and project management skills</li>
+                  <li>Gain proficiency in programming languages such as C++, Java, and Python</li>
+                  <li>Master Object-Oriented Programming (OOP), data structures, and algorithms</li>
+                  <li>Explore web development and database management</li>
+                  <li>Build a solid foundation in your preferred specialization</li>
+                </ul>
+              </div>
             </div>
           </div> 
         </div>
@@ -364,55 +545,6 @@ const Home = () =>{
         </motion.div>
       </div>
 
-      <div className="project">
-        <div className='title'>Projects</div>
-        <hr />
-        <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="projects">
-          <a href="https://github.com/Ali-EL-Badry/Pothole-Detection" className="card">
-            <img src={pothole} alt="pothole Detection" />
-            <p className="main">Pothole-Detection</p>
-            <p className="sub">Technology: YOLO</p>
-          </a>
-          <a href="https://github.com/Ali-EL-Badry/My-House" className="card">
-            <img src={fasion} alt="Fassion" />
-            <p className="main">Fasion Corner </p>
-            <p className="sub">Technology:React, HTML, bootstrap and css</p>
-          </a>
-          <a href="https://github.com/Ali-EL-Badry/Vole_Machine_Simulator" className="card">
-            <img src={vole} alt="vole machine" />
-            <p className="main">Vole Machine Simulator</p>
-            <p className="sub">Technology: C++, QT</p>
-          </a>
-        </motion.div>
-        <NavLink className="btton " id='blue' to="/projects">For More</NavLink>
-
-        <div className='title'>Certificates</div>
-        <hr />
-        <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="cert">
-          <NavLink exact to={`/certificats/hcia`} className="card">
-            <img src={hcia} alt="hcia" />
-            <p className="main">HCIA:AI</p>
-            <p className="sub">From: Huawei ICT Academy</p>
-          </NavLink>
-          <NavLink exact to={`/certificats/DOtpy`} className="card">
-            <img src={dotpy} alt="dotpy" />
-            <p className="main">AI Diploma</p>
-            <p className="sub">From: DOTPY</p>
-          </NavLink>
-          <NavLink exact to={`/certificats/aice`} className="card">
-            <img src={alx} alt="alx" />
-            <p className="main">AI Carrer essential</p>
-            <p className="sub">From: ALX</p>
-          </NavLink>
-        </motion.div>
-          <NavLink className="btton" id='black' to='/certificats'>For More</NavLink>
-      </div>
     </>
   );
 }
