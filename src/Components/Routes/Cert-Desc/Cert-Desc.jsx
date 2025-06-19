@@ -23,6 +23,8 @@ const pan = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158326/panda
 const machine = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158325/machine_bpmwnd.webp"
 const data = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158336/data_nt65ih.webp"
 const sql = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158326/sql_btezcp.webp"
+const django = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292305/Screenshot_2025-06-19_031639_vmutu1.png"
+const front = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292412/Screenshot_2025-06-19_031902_jgjdes.png"
 
 
 const certificates = [
@@ -38,6 +40,62 @@ const certificates = [
       "Learning how to train and optimize machine learning models.",
       "Gaining insights into AI applications in various industries.",
       "Developing AI models using Huawei's computing platforms."
+    ]
+  },
+  {
+    img: Git,
+    alt: "Git",
+    main: "Intro to Git and Github",
+    sub: "From: Google | Coursera",
+    description: "An introductory course on version control using Git and GitHub, essential for software development and collaboration.",
+    takeaways: [
+      "Understanding the importance of version control in software development.",
+      "Learning Git commands like commit, push, pull, and merge.",
+      "Creating and managing repositories on GitHub.",
+      "Using branches for feature development and collaboration.",
+      "Handling merge conflicts and contributing to open-source projects."
+    ]
+  },
+  {
+    img: aice,
+    alt: "AICE",
+    main: "AI Career Essential",
+    sub: "From: Alx",
+    description: "A practical AI career-oriented course covering essential skills in artificial intelligence and data science.",
+    takeaways: [
+      "Understanding key AI concepts, including supervised and unsupervised learning.",
+      "Working with Python libraries like NumPy, Pandas, and Scikit-learn.",
+      "Developing and evaluating machine learning models.",
+      "Exploring real-world AI applications and use cases.",
+      "Building a strong AI portfolio for job applications."
+    ]
+  },
+  {
+    img: django,
+    alt: "Django",
+    main: "Django Development",
+    sub: "From: Meta | Coursera",
+    description: "A comprehensive course on Django web framework, covering full-stack web development with Python.",
+    takeaways: [
+      "Understanding Django's MVT (Model-View-Template) architecture.",
+      "Building dynamic web applications with Django ORM.",
+      "Implementing user authentication and authorization systems.",
+      "Creating RESTful APIs using Django REST Framework.",
+      "Deploying Django applications to production environments."
+    ]
+  },
+  {
+    img: front,
+    alt: "intro to front end",
+    main: "Intro To Front End",
+    sub: "From: Meta | Coursera",
+    description: "An introductory course on front-end web development covering HTML, CSS, and JavaScript fundamentals.",
+    takeaways: [
+      "Learning HTML structure, semantic elements, and accessibility best practices.",
+      "Mastering CSS for responsive design, layouts, and animations.",
+      "Understanding JavaScript fundamentals and DOM manipulation.",
+      "Building interactive user interfaces with modern web technologies.",
+      "Implementing responsive design principles for mobile-first development."
     ]
   },
   {
@@ -109,34 +167,6 @@ const certificates = [
     ]
   },
   {
-    img: Git,
-    alt: "Git",
-    main: "Intro to Git and Github",
-    sub: "From: Google | Coursera",
-    description: "An introductory course on version control using Git and GitHub, essential for software development and collaboration.",
-    takeaways: [
-      "Understanding the importance of version control in software development.",
-      "Learning Git commands like commit, push, pull, and merge.",
-      "Creating and managing repositories on GitHub.",
-      "Using branches for feature development and collaboration.",
-      "Handling merge conflicts and contributing to open-source projects."
-    ]
-  },
-  {
-    img: aice,
-    alt: "AICE",
-    main: "AI Career Essential",
-    sub: "From: Alx",
-    description: "A practical AI career-oriented course covering essential skills in artificial intelligence and data science.",
-    takeaways: [
-      "Understanding key AI concepts, including supervised and unsupervised learning.",
-      "Working with Python libraries like NumPy, Pandas, and Scikit-learn.",
-      "Developing and evaluating machine learning models.",
-      "Exploring real-world AI applications and use cases.",
-      "Building a strong AI portfolio for job applications."
-    ]
-  },
-  {
     img: ecpc,
     alt: "ECPC",
     main: "ECPC Competition",
@@ -152,7 +182,7 @@ const certificates = [
   },
   {
     img: dotpy,
-    alt: "DOtpy",
+    alt: "Dotpy",
     main: "AI Diploma",
     sub: "From: Dotpy",
     description: "A specialized AI diploma covering machine learning, deep learning, and AI deployment strategies.",

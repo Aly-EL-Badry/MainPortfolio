@@ -16,7 +16,7 @@ const Footer = () => {
           <a href="https://www.linkedin.com/in/aly-el-badry/" target="_blank" rel="noopener noreferrer">
             <FaLinkedin className="social-icon" />
           </a>
-          <a href="https://github.com/Ali-EL-Badry" target="_blank" rel="noopener noreferrer">
+          <a href="https://github.com/Aly-EL-Badry" target="_blank" rel="noopener noreferrer">
             <FaGithub className="social-icon" />
           </a>
 

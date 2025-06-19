@@ -316,7 +316,7 @@
     display: flex;
     align-items: center;
     gap: 4px;
-    padding: 16px 36px;
+    padding: 0px 0px;
     border: 4px solid;
     border-color: transparent;
     font-size: 16px;
@@ -367,7 +367,7 @@
     position: relative;
     z-index: 1;
     transform: translateX(-12px);
-    
+    padding: 15px 30px;
     transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
