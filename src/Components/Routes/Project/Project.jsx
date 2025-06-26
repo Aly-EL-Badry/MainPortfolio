@@ -37,7 +37,7 @@ const projects = [
     title: "Web Development",
     items: [
       {
-        link: "https://elkamalcenter.netlify.app/",
+        link: "https://alkamalcenter.com/",
         img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750289036/Screenshot_2025-06-19_022311_qwoivs.png",
         alt: "Al-Kamal Center",
         main: "Al-Kamal Center",

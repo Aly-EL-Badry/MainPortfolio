@@ -121,7 +121,7 @@ const Home = () =>{
                 </div>
                 <div className="highlight-content">
                   <h3>Project Expert</h3>
-                  <p>Recognized Dataset Expert on Kaggle and work as freelancer on Upwork and Khamsat</p>
+                  <p>Won Third place in Creativa Entreprenur Training with Satellitor and Freelancer on Upwork and Khamsat</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -160,6 +160,7 @@ const Home = () =>{
                 <div className="skill-tags">
                   <span>React</span>
                   <span>Django</span>
+                  <span>NextJs</span>
                   <span>Tailwind</span>
                   <span>Git</span>
                   <span>GitHub</span>
@@ -368,6 +369,36 @@ const Home = () =>{
             </div>
           </div>
         </motion.div>
+      </div>
+      {/* Achievements & Prizes Section */}
+      <div className="title">Achievements & Prizes</div>
+      <hr />
+      <div className="achievements-section">
+        {[
+          {
+            id: 1,
+            image: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750968367/WhatsApp_Image_2025-06-26_at_22.47.21_d39c83e6_s95rzf.jpg",
+            title: "Third Place - Creativa Hackathon (Monofia)",
+            event: "Creativa Hackathon - Monofia",
+            description: (
+              <>
+                Won <b>Third Place</b> with <b>Satellitor</b> in the Creativa Hackathon focused on entrepreneurship and startup ideas. The hackathon covered market analysis, customer definition, professional BMC, and entrepreneurial thinking.<br/><br/>
+                Special thanks to <a href="https://www.linkedin.com/in/basmaabdelaziz/" target="_blank" rel="noopener noreferrer" style={{color:'#3498db', fontWeight:'bold'}}>Dr. Basma Abd Elaziz</a> and Dr. Mohamed Nabil for their invaluable support and mentorship.
+              </>
+            ),
+            date: "June 2025"
+          },
+          // Add more achievements here as needed
+        ].map((ach) => (
+          <div className="achievement-row" key={ach.id}>
+            <img src={ach.image} alt={ach.title} className="achievement-img" />
+            <div className="achievement-content">
+              <h3 className="achievement-title">{ach.title}</h3>
+              <p className="achievement-event">{ach.event} <span className="achievement-date">({ach.date})</span></p>
+              <div className="achievement-desc">{ach.description}</div>
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className="title">Education</div>
