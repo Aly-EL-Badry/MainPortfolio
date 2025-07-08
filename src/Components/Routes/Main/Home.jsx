@@ -1,8 +1,9 @@
 import './Home.css';
 import React from 'react'
 import { NavLink } from 'react-router-dom';
-import { FaAngleDoubleDown, FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaProjectDiagram, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket } from "react-icons/fa";
+import { FaAngleDoubleDown,FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaProjectDiagram, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket, FaStar } from "react-icons/fa";
 import { motion } from "framer-motion";
+
 
 
 const videoBg ="https://res.cloudinary.com/dqktuc5ej/video/upload/v1745161991/vi_bfhz8l.mp4"; 
@@ -14,6 +15,7 @@ const event = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159833/eve
 const h = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/huawei_thxmng.webp";
 const virtufirm = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159828/virtufirm_o9hoog.webp"
 const outlier = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1749665520/CTA-8_itxtjp.png"
+
 
 const Home = () =>{
   const handleScroll = () => {
@@ -35,6 +37,20 @@ const Home = () =>{
       description: "Coordinated and managed the graduation party, overseeing planning, logistics, and execution to ensure a seamless and memorable event.",
     },
   ];
+
+  const reviews = [
+    {
+      name: "Sherin Mohamed",
+      company: "Al Kamal Center",
+      service: "Web Development",
+      review: "I highly recommend ENG. Aly El-Deen to anyone looking for a skilled, reliable, and creative web developer. We look forward to working with them again on future projects in our Company!",
+      avatar: "https://res.cloudinary.com/dmqdsxrgy/image/upload/v1748954624/logo_lzz9xn.jpg",
+      website: "https://alkamalcenter.com",
+      rating: 5,
+      reviewLink: "https://www.linkedin.com/services/page/4a8a133385020a4930/"
+    }, 
+
+  ]
 
 
   return (
@@ -121,7 +137,7 @@ const Home = () =>{
                 </div>
                 <div className="highlight-content">
                   <h3>Project Expert</h3>
-                  <p>Recognized Dataset Expert on Kaggle and work as freelancer on Upwork and Khamsat</p>
+                  <p>Won Third place in Creativa Entreprenur Training with Satellitor and Freelancer on Upwork and Khamsat</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -160,6 +176,7 @@ const Home = () =>{
                 <div className="skill-tags">
                   <span>React</span>
                   <span>Django</span>
+                  <span>NextJs</span>
                   <span>Tailwind</span>
                   <span>Git</span>
                   <span>GitHub</span>
@@ -369,6 +386,83 @@ const Home = () =>{
           </div>
         </motion.div>
       </div>
+      {/* Achievements & Prizes Section */}
+      <div className="title">Achievements & Prizes</div>
+      <hr />
+      <div className="achievements-section">
+        <div className="achievements-background">
+          <div className="achievements-particles"></div>
+          <div className="achievements-glow"></div>
+        </div>
+        {[
+          {
+            id: 1,
+            image: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750968367/WhatsApp_Image_2025-06-26_at_22.47.21_d39c83e6_s95rzf.jpg",
+            title: "Third Place - Creativa Hackathon (Monofia)",
+            event: "Creativa Hackathon - Monofia",
+            description: (
+              <>
+                Won <b>Third Place</b> with <b>Satellitor</b> in the Creativa Hackathon focused on entrepreneurship and startup ideas. The hackathon covered market analysis, customer definition, professional BMC, and entrepreneurial thinking.<br/><br/>
+                Special thanks to <a href="https://www.linkedin.com/in/basmaabdelaziz/" target="_blank" rel="noopener noreferrer" style={{color:'#3498db', fontWeight:'bold'}}>Dr. Basma Abd ElAziz</a> and <a href="https://www.linkedin.com/in/mohamed-nabil-2b6165112/" target="_blank" rel="noopener noreferrer" style={{color:'#3498db', fontWeight:'bold'}}>Dr. Mohamed Nabil</a> for their invaluable support and mentorship.
+              </>
+            ),
+            date: "June 2025",
+            badge: "🏆",
+            category: "Hackathon"
+          },
+        ].map((ach, index) => (
+          <motion.div 
+            initial={{ y: 100, opacity: 0, scale: 0.8 }}
+            whileInView={{ y: 0, opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.8, ease: "easeOut", delay: index * 0.2 }}
+            className="achievement-row" 
+            key={ach.id}
+          >
+            <div className="achievement-badge">
+              <span className="badge-icon">{ach.badge}</span>
+              <span className="badge-category">{ach.category}</span>
+            </div>
+            <div className="achievement-image-container">
+              <div className="achievement-image-glow"></div>
+              <img src={ach.image} alt={ach.title} className="achievement-img" />
+              
+            </div>
+            <div className="achievement-content">
+              <div className="achievement-header">
+                <h3 className="achievement-title">{ach.title}</h3>
+                <div className="achievement-meta">
+                  <p className="achievement-event">{ach.event}</p>
+                  <span className="achievement-date">({ach.date})</span>
+                </div>
+              </div>
+              <div className="achievement-desc">{ach.description}</div>
+              <div className="achievement-stats">
+                <div className="stat-item">
+                  <FaTrophy className="stat-icon" />
+                  <span>Third Place</span>
+                </div>
+                <div className="stat-item">
+                  <FaUsers className="stat-icon" />
+                  <span>Team Project</span>
+                </div>
+                <div className="stat-item">
+                  <FaRocket className="stat-icon" />
+                  <span>Innovation</span>
+                </div>
+              </div>
+            </div>
+            <div className="achievement-decoration">
+              <div className="decoration-line"></div>
+              <div className="decoration-dots">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </motion.div>
+        ))}
+      </div>
 
       <div className="title">Education</div>
       <hr />
@@ -545,6 +639,33 @@ const Home = () =>{
         </motion.div>
       </div>
 
+      <div className="title">Customer Reviews</div>
+      <hr />
+      <div className="customer-reviews">
+        {reviews.map((review, index) => (
+          <div className="review-card" key={index}>
+            <div className="review-left">
+              <img src={review.avatar} alt={review.name} className="review-avatar" />
+              <div className="review-name">{review.name}</div>
+              <div className="review-company">{review.company}</div>
+              <div className="review-service">{review.service}</div>
+              <div className="review-stars">
+                {[...Array(review.rating)].map((_, i) => (
+                  <FaStar key={i} className="star-icon" />
+                ))}
+              </div>
+            </div>
+            <div className="review-separator"></div>
+            <div className="review-right">
+              <div className="review-text">{review.review}</div>
+              <div className="review-links">
+                <a href={review.website} target="_blank" rel="noopener noreferrer" className="review-btn">Visit Website</a>
+                <a href={review.reviewLink} target="_blank" rel="noopener noreferrer" className="review-btn">View Review</a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
     </>
   );
 }
