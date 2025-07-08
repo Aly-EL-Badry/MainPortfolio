@@ -68,7 +68,7 @@ const Home = () =>{
               <span className="role-separator">|</span>
               <span className="role">Full-Stack Developer</span>
               <span className="role-separator">|</span>
-              <span className="role">Data Scientist</span>
+              <span className="role">Entrepreneur</span>
             </div>
             <p className="desc">
               Transforming ideas into intelligent solutions through the power of
