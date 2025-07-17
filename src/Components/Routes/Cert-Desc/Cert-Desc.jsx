@@ -25,6 +25,10 @@ const data = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158336/data
 const sql = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158326/sql_btezcp.webp"
 const django = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292305/Screenshot_2025-06-19_031639_vmutu1.png"
 const front = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292412/Screenshot_2025-06-19_031902_jgjdes.png"
+const depi = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783989/DEPI_Data_Science_Grad_vpy20t.png"
+const tailwindPractical = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783986/Tailwind_Practical_project_zvacda.png"
+const tailwindBasics = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783985/Tailwind_Basics_vruvpl.png"
+const tailwindSpecialization = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783980/Tailwind_Specialization_ztmvry.png"
 
 
 const certificates = [
@@ -304,6 +308,62 @@ const certificates = [
       "Working with relational databases like MySQL and PostgreSQL.",
       "Optimizing queries for better performance.",
       "Using SQL for data analysis and reporting."
+    ]
+  },
+  {
+    img: depi,
+    alt: "DEPI",
+    main: "Data Science Grad",
+    sub: "From: DEPI",
+    description: "A comprehensive data science program covering the full data science lifecycle, from data wrangling to machine learning and deployment.",
+    takeaways: [
+      "Mastering data wrangling, cleaning, and preprocessing techniques.",
+      "Building and evaluating machine learning models for real-world problems.",
+      "Understanding data visualization and communication best practices.",
+      "Deploying data science solutions and working with cloud platforms.",
+      "Completing hands-on projects to build a strong data science portfolio."
+    ]
+  },
+  {
+    img: tailwindSpecialization,
+    alt: "Tailwind Specialization",
+    main: "Tailwind Specialization",
+    sub: "From: Coursera",
+    description: "A specialization focused on advanced Tailwind CSS techniques for building modern, responsive web interfaces.",
+    takeaways: [
+      "Mastering advanced Tailwind CSS utilities and configuration.",
+      "Building scalable and maintainable design systems.",
+      "Implementing custom themes and responsive layouts.",
+      "Optimizing performance and accessibility with Tailwind.",
+      "Completing real-world projects using Tailwind CSS."
+    ]
+  },
+  {
+    img: tailwindPractical,
+    alt: "Tailwind Practical",
+    main: "Tailwind Practical Project",
+    sub: "From: Coursera",
+    description: "A hands-on project course applying Tailwind CSS to build a fully responsive and interactive web application.",
+    takeaways: [
+      "Applying Tailwind CSS to real-world web projects.",
+      "Building responsive layouts and interactive UI components.",
+      "Integrating Tailwind with modern JavaScript frameworks.",
+      "Following best practices for code organization and reusability.",
+      "Deploying and showcasing a completed Tailwind project."
+    ]
+  },
+  {
+    img: tailwindBasics,
+    alt: "Tailwind Basics",
+    main: "Tailwind Basics",
+    sub: "From: Coursera",
+    description: "An introductory course on Tailwind CSS, covering the fundamentals of utility-first CSS and rapid UI development.",
+    takeaways: [
+      "Understanding the utility-first approach of Tailwind CSS.",
+      "Learning core Tailwind classes for layout, spacing, and typography.",
+      "Building simple, responsive web pages with Tailwind.",
+      "Customizing Tailwind configuration for project needs.",
+      "Gaining confidence in using Tailwind for rapid prototyping."
     ]
   }
 ];

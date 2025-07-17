@@ -23,12 +23,17 @@ const data = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158336/data
 const sql = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745158326/sql_btezcp.webp"
 const django = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292305/Screenshot_2025-06-19_031639_vmutu1.png"
 const front = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1750292412/Screenshot_2025-06-19_031902_jgjdes.png"
+const depi = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783989/DEPI_Data_Science_Grad_vpy20t.png"
+const tailwindPractical = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783986/Tailwind_Practical_project_zvacda.png"
+const tailwindBasics = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783985/Tailwind_Basics_vruvpl.png"
+const tailwindSpecialization = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783980/Tailwind_Specialization_ztmvry.png"
 
 const certificates = [
+  { img: depi, alt: "DEPI", main: "DEPI Data Science Graduate", sub: "From: DEPI" },
   { img: Git, alt: "Git", main: "Intro to Git and Github", sub: "From: Google | Coursera" },
+  { img: tailwindSpecialization, alt: "Tailwind Specialization", main: "Tailwind Specialization", sub: "From: Coursera" },
   { img: hcia, alt: "hcia", main: "HCIA:AI", sub: "From: Huawei ICT Academy" },
   { img: aice, alt: "AICE", main: "AI Career Essential", sub: "From: Alx" },
-  
   // Web Development
   { img: django , alt: "Django", main: "Django Development", sub: "From: Meta | Coursera"},
   { img: front , alt: "intro to front end", main: "Intro To Front End", sub: "From: Meta | Coursera"},
@@ -37,14 +42,14 @@ const certificates = [
   { img: introToDataBase, alt: "Intro to DataBase", main: "Intro to DataBase", sub: "From: Meta | Coursera" },
   { img: ProgramminginPython, alt: "Programming in Python", main: "Programming in Python", sub: "From: Meta | Coursera" },
   { img: hc, alt: "HTML-CSS", main: "HTML and CSS", sub: "From: ITI" },
-  
+  { img: tailwindPractical, alt: "Tailwind Practical", main: "Tailwind Practical Project", sub: "From: Coursera" },
+  { img: tailwindBasics, alt: "Tailwind Basics", main: "Tailwind Basics", sub: "From: Coursera" },
   // Ai Development
   { img: dotpy, alt: "Dotpy", main: "AI Diploma", sub: "From: Dotpy" },
   { img: py, alt: "python", main: "Python", sub: "From: Kaggle" },
   { img: pan, alt: "Pandas", main: "Pandas", sub: "From: Kaggle" },
   { img: data, alt: "data-cleaning", main: "Data Cleaning", sub: "From: Kaggle" },
   { img: machine, alt: "intro-to-machine", main: "Intro to Machine Learning", sub: "From: Kaggle" },
-  
   // Others
   { img: ecpc, alt: "ECPC", main: "ECPC Competition", sub: "Technology: ECPC" },
   { img: clean, alt: "clean-code", main: "Clean Code", sub: "From: ITI" },
@@ -55,11 +60,11 @@ const certificates = [
 
 // Separate certificates into important and others
 const importantCertificates = certificates.filter(cert => 
-  ['hcia', 'Git', 'AICE'].includes(cert.alt)
+  ['hcia', 'Git', 'AICE', 'DEPI', 'Tailwind Specialization'].includes(cert.alt)
 );
 
 const webDevelopmentCertificates = certificates.filter(cert => 
-  ['Django', 'intro to front end', 'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS'].includes(cert.alt)
+  ['Django', 'intro to front end',"Tailwind Practical", "Tailwind Basics", 'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS'].includes(cert.alt)
 );
 
 const aiDevelopmentCertificates = certificates.filter(cert => 
@@ -67,7 +72,7 @@ const aiDevelopmentCertificates = certificates.filter(cert =>
 );
 
 const otherCertificates = certificates.filter(cert => 
-  !['hcia', 'Git', 'AICE', 'Dotpy', 'Django', 'intro to front end', 'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS', 'python', 'Pandas', 'data-cleaning', 'intro-to-machine'].includes(cert.alt)
+  !['DEPI','Tailwind Specialization',"Tailwind Basics","Tailwind Practical",'hcia', 'Git', 'AICE', 'Dotpy', 'Django', 'intro to front end', 'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS', 'python', 'Pandas', 'data-cleaning', 'intro-to-machine'].includes(cert.alt)
 );
 
 const MotionNavLink = motion(NavLink);

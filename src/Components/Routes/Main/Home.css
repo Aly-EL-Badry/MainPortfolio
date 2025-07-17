@@ -2457,278 +2457,216 @@ hr {
   }
 }
 
-/* --- Redesigned Review Section (More Black, Separator, Two per Row) --- */
-.customer-reviews {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  gap: 2.5rem;
-  margin: 3rem 30px;
+.customer-reviews{
+  padding:50px 0px;
+  z-index: 1;
+  min-height: 400px;
+  width: 100%;
+}
+
+.swiper-container{
+  width: 100%;
+  padding-bottom: 3.5rem;
+  position: relative;
 }
 
 .review-card {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  max-width: 710px;
-  min-width: 500px;
-  background: rgba(2, 3, 6, 0.98);
-  border-radius: 38px;
-  box-shadow: 0 8px 40px 0 rgba(52, 152, 219, 0.13), 0 0 80px 0 #3498db18, 0 12px 32px 0 #000b  ;
-  overflow: hidden;
-  transition: box-shadow 0.4s, transform 0.3s, background 0.3s;
-  margin: 0;
-  position: relative;
-  backdrop-filter: blur(20px) saturate(1.1);
-  z-index: 1;
-}
-.review-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
   height: 100%;
-  background:
-    linear-gradient(120deg, rgba(255,255,255,0.08) 10%, rgba(255,255,255,0.01) 60%),
-    radial-gradient(circle at 20% 80%, #3498db18 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, #2980b918 0%, transparent 60%),
-    repeating-radial-gradient(circle at 60% 60%, #3498db10 0 1.5px, transparent 2.5px 40px);
-  z-index: 0;
-  pointer-events: none;
-  opacity: 0.5;
-  transition: opacity 0.3s;
-  animation: particlesMove 12s linear infinite alternate;
-}
-@keyframes particlesMove {
-  0% { background-position: 0% 0%, 100% 100%, 0% 100%; }
-  100% { background-position: 100% 100%, 0% 0%, 100% 0%; }
-}
-.review-card::after {
-  content: '';
-  position: absolute;
-  left: -60%;
-  top: -60%;
-  width: 220%;
-  height: 220%;
-  background: linear-gradient(110deg, rgba(52,152,219,0.07) 0%, rgba(41,128,185,0.02) 100%);
-  opacity: 0.22;
-  pointer-events: none;
-  z-index: 0;
-  transition: opacity 0.3s;
-}
-.review-card:hover {
-  box-shadow: 0 0 48px 0 #3498db44, 0 20px 80px 0 #3498db22, 0 16px 48px 0 #000c;
-  transform: translateY(-12px) scale(1.035);
-  background: rgba(2, 4, 8, 1);
-}
-.review-card:hover::before {
-  opacity: 0.7;
-  background:
-    linear-gradient(100deg, rgba(255,255,255,0.13) 15%, rgba(255,255,255,0.01) 60%),
-    radial-gradient(circle at 20% 80%, #3498db22 0%, transparent 60%),
-    radial-gradient(circle at 80% 20%, #2980b922 0%, transparent 60%),
-    repeating-radial-gradient(circle at 60% 60%, #3498db18 0 1.5px, transparent 2.5px 40px);
-  animation: sweepLight 1.8s linear;
-}
-@keyframes sweepLight {
-  0% { background-position: -100% 0; }
-  100% { background-position: 200% 0; }
-}
-.review-card:hover::after {
-  opacity: 0.32;
-}
-
-.review-left {
-  flex: 1 1 28%;
-  min-width: 160px;
-  max-width: 220px;
-  background: none;
+  width: 700px;
+  margin: 40px auto;
+  background: rgba(13, 13, 20, 0.92);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(52, 152, 219, 0.18), 0 0 0 2px #3498db33;
+  border: 1.5px solid #3498db55;
+  padding: 2.2rem 2rem 2.5rem 2rem;
+  backdrop-filter: blur(18px) saturate(1.2);
+  position: relative;
+  transition: box-shadow 0.3s, border 0.3s;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 2.2rem 1.2rem 2.2rem 1.2rem;
-  position: relative;
-  z-index: 2;
 }
-.review-avatar {
+
+.review-card:hover {
+  box-shadow: 0 0 32px 0 #3498db99, 0 0 0 3px #3498db;
+  border: 2px solid #3498db;
+}
+.review-avatar-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+.review-avatar-ring {
+  position: relative;
   width: 90px;
   height: 90px;
   border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #3498db;
-  box-shadow: 0 0 0 16px #3498db22, 0 2px 32px 0 #3498db77;
-  background: #fff;
-  margin-bottom: 1.1rem;
-  position: relative;
+  background: linear-gradient(135deg, #3498db 0%, #0a0a0a 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 24px #3498db55, 0 0 0 4px #222 inset;
   z-index: 2;
-  animation: avatarPulse 2.5s infinite alternate;
 }
-@keyframes avatarPulse {
-  0% { box-shadow: 0 0 0 16px #3498db22, 0 2px 32px 0 #3498db77; }
-  100% { box-shadow: 0 0 0 24px #3498db33, 0 2px 48px 0 #3498db99; }
+.review-avatar {
+  width: 74px;
+  height: 74px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 0 16px #3498db55;
+  z-index: 2;
+}
+.review-avatar-glow {
+  position: absolute;
+  top: -8px; left: -8px; right: -8px; bottom: -8px;
+  border-radius: 50%;
+  box-shadow: 0 0 32px 8px #3498db88, 0 0 0 2px #3498db44;
+  pointer-events: none;
+  z-index: 1;
+  animation: avatarGlow 2.5s infinite alternate;
+}
+@keyframes avatarGlow {
+  0% { box-shadow: 0 0 32px 8px #3498db88, 0 0 0 2px #3498db44; }
+  100% { box-shadow: 0 0 48px 12px #3498dbcc, 0 0 0 4px #3498db66; }
+}
+.review-avatar-spin {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border-radius: 50%;
+  border: 2px dashed #3498db99;
+  animation: spin 6s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+.review-content {
+  position: relative;
+  background: rgba(20, 20, 30, 0.7);
+  border-radius: 12px;
+  padding: 1.2rem 1.5rem 1.5rem 1.5rem;
+  box-shadow: 0 0 0 1.5px #3498db33 inset;
+  z-index: 1;
+  overflow: hidden;
+}
+.review-scan-lines {
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(52,152,219,0.07) 0px,
+    rgba(52,152,219,0.07) 2px,
+    transparent 2px,
+    transparent 8px
+  );
+  z-index: 2;
+  mix-blend-mode: lighten;
+  animation: scanMove 3.5s linear infinite;
+}
+@keyframes scanMove {
+  0% { background-position-y: 0; }
+  100% { background-position-y: 16px; }
+}
+.review-particles {
+  pointer-events: none;
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: 1;
+  background: radial-gradient(circle at 20% 30%, #3498db22 0%, transparent 70%),
+              radial-gradient(circle at 80% 70%, #3498db11 0%, transparent 80%);
+}
+.review-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.7rem 1.2rem;
+  margin-bottom: 0.7rem;
+  justify-content: flex-start;
 }
 .review-name {
-  font-size: 1.22rem;
-  font-weight: 700;
   color: #fff;
-  margin: 0.2rem 0 0 0;
-  text-align: center;
-  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  text-shadow: 0 0 8px #3498db55;
 }
 .review-company {
-  font-size: 1.08rem;
   color: #3498db;
-  margin: 0.1rem 0 0.2rem 0;
-  text-align: center;
+  font-size: 1.1rem;
   font-weight: 600;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 .review-service {
-  font-size: 1.01rem;
-  color: #b0c4de;
-  margin-bottom: 0.5rem;
-  text-align: center;
-  font-weight: 500;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 400;
+  background: #3498db33;
+  border-radius: 6px;
+  padding: 2px 10px;
+  margin-left: 0.5rem;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
 }
 .review-stars {
   display: flex;
-  gap: 0.15rem;
-  margin-bottom: 0.7rem;
-  justify-content: center;
+  align-items: center;
+  gap: 2px;
+  margin-left: auto;
 }
-.star-icon {
+.review-star {
   color: #3498db;
-  font-size: 1.13rem;
-  filter: drop-shadow(0 0 12px #3498dbcc);
-  text-shadow: 0 0 10px #3498db99;
-  animation: starPulse 2.2s infinite alternate;
-}
-@keyframes starPulse {
-  0% { filter: drop-shadow(0 0 8px #3498db88); }
-  100% { filter: drop-shadow(0 0 18px #3498dbcc); }
-}
-
-.review-separator {
-  width: 5px;
-  min-width: 5px;
-  max-width: 5px;
-  height: 80%;
-  align-self: center;
-  background: linear-gradient(180deg, #3498db 0%, #2980b9 100%);
-  border-radius: 2.5px;
-  margin: 0 2rem;
-  opacity: 1;
-  box-shadow: 0 0 32px #3498dbcc, 0 0 12px #3498db77;
-  animation: separatorPulse 2.5s infinite alternate;
-  transition: box-shadow 0.3s;
-}
-@keyframes separatorPulse {
-  0% { box-shadow: 0 0 16px #3498db99, 0 0 8px #3498db44; }
-  100% { box-shadow: 0 0 32px #3498dbcc, 0 0 16px #3498db77; }
-}
-.review-card:hover .review-separator {
-  box-shadow: 0 0 48px #3498dbcc, 0 0 24px #3498db99;
-}
-
-.review-right {
-  flex: 3 1 72%;
-  padding: 2.2rem 2.5rem 1.2rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background: none;
-  position: relative;
-  z-index: 2;
+  font-size: 1.2rem;
+  filter: drop-shadow(0 0 6px #3498db99);
+  transition: color 0.2s;
 }
 .review-text {
   color: #fff;
-  font-size: 1rem;
-  text-align: left;
-  line-height: 1.7;
-  font-family: 'Courier New', Courier, monospace;
-  text-shadow: 0 0 24px #3498db33;
-  margin-bottom: 1.3rem;
-  font-weight: 500;
-  letter-spacing: 0.1px;
+  font-size: 1.13rem;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
+  margin-bottom: 1.1rem;
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  text-shadow: 0 0 6px #3498db22;
 }
-.review-links {
+.review-actions {
   display: flex;
-  flex-direction: row;
-  gap: 1.1rem;
-  width: 100%;
-  align-items: flex-start;
-  margin-top: 0.2rem;
-  z-index: 2;
+  gap: 1.2rem;
+  margin-top: 0.7rem;
 }
 .review-btn {
-  background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
+  background: linear-gradient(90deg, #3498db 60%);
   color: #fff;
-  padding: 0.55rem 1.4rem;
-  border-radius: 9px;
-  text-decoration: none;
   font-weight: 700;
-  font-size: 1.04rem;
-  transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 12px #3498db55;
+  font-family: 'Share Tech Mono', 'Courier New', monospace;
   border: none;
-  outline: none;
-  text-align: center;
-  letter-spacing: 0.2px;
-  filter: drop-shadow(0 0 12px #3498db44);
+  border-radius: 6px;
+  padding: 8px 22px;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 0 12px #3498db44;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  position: relative;
+  z-index: 2;
 }
 .review-btn:hover {
-  background: #fff;
+  background: linear-gradient(90deg, black 60%);
   color: #3498db;
-  transform: translateY(-2px) scale(1.07);
-  box-shadow: 0 4px 32px #3498dbcc;
+  box-shadow: 0 0 24px #3498db99;
 }
-
-@media (max-width: 1200px) {
-  .review-card {
-    min-width: 320px;
-    max-width: 98vw;
-    width: 100%;
-  }
-  .review-right {
-    padding: 1.5rem 1rem 1rem 1rem;
-  }
+.holo-border-anim {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  box-shadow: 0 0 0 2px #3498db88, 0 0 32px 8px #3498db44;
+  z-index: 3;
+  animation: holoGlow 2.5s infinite alternate;
 }
-@media (max-width: 900px) {
-  .customer-reviews {
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
-    margin: 2rem 5px;
-  }
-  .review-card {
-    flex-direction: column;
-    min-width: 220px;
-    max-width: 98vw;
-    width: 100%;
-    margin: 0 0 2rem 0;
-    backdrop-filter: blur(8px) saturate(1.2);
-  }
-  .review-separator {
-    width: 80%;
-    min-width: 80%;
-    max-width: 80%;
-    height: 3px;
-    margin: 1.2rem auto;
-    background: linear-gradient(90deg, #3498db 0%, #2980b9 100%);
-    box-shadow: 0 0 24px #3498dbcc, 0 0 12px #3498db77;
-    animation: separatorPulse 2.5s infinite alternate;
-  }
-  .review-left, .review-right {
-    width: 100%;
-    max-width: 100%;
-    padding: 1.2rem 0.7rem;
-  }
-  .review-links {
-    flex-direction: column;
-    gap: 0.7rem;
-    align-items: flex-start;
-  }
+@keyframes holoGlow {
+  0% { box-shadow: 0 0 0 2px #3498db88, 0 0 32px 8px #3498db44; }
+  100% { box-shadow: 0 0 0 4px #3498dbcc, 0 0 48px 16px #3498db99; }
 }
-
-
