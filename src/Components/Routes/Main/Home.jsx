@@ -1,7 +1,7 @@
 import './Home.css';
-import React from 'react'
+import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { FaAngleDoubleDown,FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaProjectDiagram, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket, FaStar } from "react-icons/fa";
+import { FaAngleDoubleDown,FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaProjectDiagram, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket, FaStar, FaTimes } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -22,6 +22,8 @@ const outlier = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1749665520/C
 
 
 const Home = () =>{
+  const [selectedImage, setSelectedImage] = useState(null);
+  
   const handleScroll = () => {
     window.scrollBy({ top: 690, behavior: "smooth" }); 
   };
@@ -565,6 +567,140 @@ const Home = () =>{
         </motion.div>
       ))}
     </div>
+
+    {/* Student Activities Media Section (no title, no hr) */}
+    <motion.div 
+      initial={{ y: 50, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}  
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }} 
+      className="activity-media-section"
+    >
+      <div className="activity-media-content">
+        <motion.div 
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="activity-media-video"
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/WrECRxbWMlg"
+            title="Unsupervised Learning Workshop - Aly El-Badry"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowFullScreen
+            className="activity-media-iframe"
+          ></iframe>
+        </motion.div>
+        <motion.div 
+          initial={{ x: 50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="activity-content"
+        >
+          {/* Header */}
+          <div className="activity-media-header">
+            AI Workshop
+          </div>
+
+          {/* Description */}
+          <div className="activity-media-description">
+            <span className="activity-media-description-title">Workshop Highlights:</span>
+            <ul className="activity-media-description-list">
+              <li><b>Unsupervised Learning:</b> Clustering, dimensionality reduction, association rules</li>
+              <li><b>Supervised Classification:</b> Logistic Regression, KNN, SVM, Decision Trees</li>
+              <li><b>Ensemble Methods:</b> Random Forest and XGBoost implementation</li>
+              <li><b>Real-world Applications:</b> Industry projects and case studies</li>
+            </ul>
+          </div>
+
+          {/* Best Students Line */}
+          <div className="activity-media-best-students">
+            <span className="activity-media-best-students-title">Best Students:</span>
+            <div className="activity-media-best-students-list">
+              It is an honor to be mentor for{' '}
+              <a href="https://www.linkedin.com/in/student1/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 1]</a>,{' '}
+              <a href="https://www.linkedin.com/in/student2/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 2]</a>,{' '}
+              <a href="https://www.linkedin.com/in/student3/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 3]</a>,{' '}
+              <a href="https://www.linkedin.com/in/student4/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 4]</a>, and{' '}
+              <a href="https://www.linkedin.com/in/student5/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 5]</a>.
+            </div>
+          </div>
+
+          {/* Photo Gallery */}
+          <div className="activity-media-gallery">
+            {[
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795136/6_yfegzx.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795144/5_lbhozx.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795157/4_ot1nh7.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795155/2_elkkv7.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795144/3_sqgepp.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795153/1_lcaewx.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795151/7_axx0pw.jpg",
+              "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752795145/8_dlm0me.jpg"
+            ].map((url, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.1, y: -3 }}
+                whileTap={{ scale: 0.95 }}
+                onClick={() => setSelectedImage(url)}
+                className="activity-media-gallery-item"
+              >
+                <img 
+                  src={url} 
+                  alt={`Workshop ${idx+1}`} 
+                  className="activity-media-gallery-img"
+                />
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+    </motion.div>
+
+    {selectedImage && (
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        exit={{ opacity: 0 }}
+        onClick={() => setSelectedImage(null)}
+        className="modal-overlay"
+      >
+        <motion.div
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          onClick={(e) => e.stopPropagation()}
+          className="modal-image-container"
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="modal-close-btn"
+            onMouseEnter={(e) => {
+              e.target.style.background = 'rgba(52, 152, 219, 0.4)';
+              e.target.style.transform = 'scale(1.1)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = 'rgba(52, 152, 219, 0.2)';
+              e.target.style.transform = 'scale(1)';
+            }}
+          >
+            <FaTimes />
+          </button>
+          <div className="modal-image-wrapper">
+            <img
+              src={selectedImage}
+              alt="Workshop"
+              className="modal-image"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+    )}
 
       
       <div className='title'>Skills and Services</div>
