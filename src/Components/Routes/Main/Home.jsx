@@ -623,11 +623,11 @@ const Home = () =>{
             <span className="activity-media-best-students-title">Best Students:</span>
             <div className="activity-media-best-students-list">
               It is an honor to be mentor for{' '}
-              <a href="https://www.linkedin.com/in/student1/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 1]</a>,{' '}
-              <a href="https://www.linkedin.com/in/student2/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 2]</a>,{' '}
-              <a href="https://www.linkedin.com/in/student3/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 3]</a>,{' '}
-              <a href="https://www.linkedin.com/in/student4/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 4]</a>, and{' '}
-              <a href="https://www.linkedin.com/in/student5/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">[Student Name 5]</a>.
+              <a href="https://www.linkedin.com/in/abdelhalim-ahmed-720827248/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">Abdelhalim Ahmed</a>,{' '}
+              <a href="https://www.linkedin.com/in/nada-shams-eldin-095515320/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">Nada Shams ElDin</a>,{' '}
+              <a href="https://www.linkedin.com/in/malak-hassan-b2b984271/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">Malak Hassan</a>,{' '}
+              <a href="https://www.linkedin.com/in/marwan-allam-634b1b338/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">Marwan Allam</a>, and{' '}
+              <a href="https://www.linkedin.com/in/mohannad-ashraf-888b24328/" target="_blank" rel="noopener noreferrer" className="activity-media-student-link">Mohanned Ashraf</a>.
             </div>
           </div>
 
