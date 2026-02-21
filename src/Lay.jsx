@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import Header from './Components/Header/Header.jsx';
 import Footer from './Components/Footer/Footer.jsx';
-import './Lay.css';
+// import './Lay.css';
 import { AiOutlineArrowUp } from 'react-icons/ai';
 
 function Lay() {

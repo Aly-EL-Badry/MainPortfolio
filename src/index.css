@@ -1,3 +1,4 @@
+@import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
 
 * {
@@ -12,11 +13,10 @@ html, body, #root {
   font-family: 'Roboto', sans-serif;
   color: white;
   scroll-behavior: smooth;
-  background: linear-gradient(135deg, #000000, #090909);
+  background: black;
 }
 ::-webkit-scrollbar {
-  width: 12px; 
-}
+  width: 12px; }
 
 ::-webkit-scrollbar-track {
   background: #333; 

@@ -1,7 +1,7 @@
 import './Home.css';
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom';
-import { FaAngleDoubleDown,FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaProjectDiagram, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket, FaStar, FaTimes } from "react-icons/fa";
+import { FaAngleDoubleDown, FaArrowRight, FaPython, FaReact, FaCode, FaBrain, FaDatabase, FaChartLine, FaTools, FaServer, FaGitAlt, FaLightbulb, FaLanguage, FaUsers, FaCogs, FaCodeBranch, FaMobile, FaTrophy, FaChalkboardTeacher, FaRocket, FaStar, FaTimes, FaGraduationCap, FaProjectDiagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
@@ -17,7 +17,6 @@ const depi = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159825/depi
 const star = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/star_henlap.webp";
 const event = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159833/event_hd39ee.webp";
 const h = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/huawei_thxmng.webp";
-const virtufirm = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159828/virtufirm_o9hoog.webp"
 const outlier = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1749665520/CTA-8_itxtjp.png"
 
 
@@ -61,6 +60,7 @@ const Home = () =>{
 
   return (
     <>
+      {/* 1st Page. */}
       <div className="mainPage">
         <video autoPlay loop muted className="video-bg">
           <source src={videoBg} type="video/mp4" />
@@ -103,15 +103,16 @@ const Home = () =>{
         </div>
       </div>
       
+      {/* 2nd Page. */}
       <div className='title' id="about">About Me</div>
       <hr />
       <div className='about'>
         <div className='about-content'>
           <motion.div
             initial={{ y: 50, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}  
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }} 
+            transition={{ duration: 0.3, ease: "easeInOut" }}
             className="about-left">
             <div className="tech-stack">
               <div className="tech-item">
@@ -133,8 +134,8 @@ const Home = () =>{
                   <FaRocket />
                 </div>
                 <div className="highlight-content">
-                  <h3>AI Innovation</h3>
-                  <p>Leading AI initiatives at Star Union & DEPI, specializing in computer vision and NLP</p>
+                  <h3>DEPI & Satellitor</h3>
+                  <p>Top place with Satellitor at DEPI; project recommended as a startup. Driving AI and product innovation in real-world settings.</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -142,17 +143,8 @@ const Home = () =>{
                   <FaTrophy />
                 </div>
                 <div className="highlight-content">
-                  <h3>Project Expert</h3>
-                  <p>Won Third place in Creativa Entreprenur Training with Satellitor and Freelancer on Upwork and Khamsat</p>
-                </div>
-              </div>
-              <div className="highlight-item">
-                <div className="highlight-icon">
-                  <FaProjectDiagram />
-                </div>
-                <div className="highlight-content">
-                  <h3>VirtuFirm Founder</h3>
-                  <p>Leading a community of tech enthusiasts and driving the community's vision forward.</p>
+                  <h3>Proven Project Results</h3>
+                  <p>Third place in Creativa Entrepreneur Training (Satellitor); successful delivery on Upwork and Khamsat.</p>
                 </div>
               </div>
               <div className="highlight-item">
@@ -160,46 +152,77 @@ const Home = () =>{
                   <FaUsers />
                 </div>
                 <div className="highlight-content">
-                  <h3>Event Organizer</h3>
-                  <p>Organizing AI workshops and university tech events</p>
+                  <h3>Star Union — Vice Head AI Community</h3>
+                  <p>Leading the project track in Star Union’s AI community; steering technical direction and team delivery.</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaGraduationCap />
+                </div>
+                <div className="highlight-content">
+                  <h3>AI Student — 3rd Year</h3>
+                  <p>AI department, 3rd year. GPA 3.22; ranked 40th in my department.</p>
                 </div>
               </div>
             </div>
-            <div className="skills-grid">
-              <div className="skill-category">
-                <h4>AI & ML</h4>
-                <div className="skill-tags">
-                  <span>YOLO</span>
-                  <span>PyTorch</span>
-                  <span>TensorFlow</span>
-                  <span>NLP</span>
-                  <span>Computer Vision</span>
-                  <span>Machine Learning</span>
+            <div className="skills-showcase">
+              <div className="skills-col">
+                <div className="skills-col-header">
+                  <FaCode className="skills-col-icon" />
+                  <h4>Full-Stack Developer</h4>
+                </div>
+                <div className="skills-pills">
+                  <span className="skill-pill">React</span>
+                  <span className="skill-pill">Next.js</span>
+                  <span className="skill-pill">Django</span>
+                  <span className="skill-pill">FastAPI</span>
+                  <span className="skill-pill">Flask</span>
+                  <span className="skill-pill">Tailwind</span>
+                  <span className="skill-pill">Git</span>
+                  <span className="skill-pill">GitHub</span>
                 </div>
               </div>
-              <div className="skill-category">
-                <h4>Tech</h4>
-                <div className="skill-tags">
-                  <span>React</span>
-                  <span>Django</span>
-                  <span>NextJs</span>
-                  <span>Tailwind</span>
-                  <span>Git</span>
-                  <span>GitHub</span>
-                  <span>C++</span>
-                  <span>Java</span>
-                  <span>Qt</span>
-                  <span>C#</span>
+              <div className="skills-col">
+                <div className="skills-col-header">
+                  <FaDatabase className="skills-col-icon" />
+                  <h4>Data Science</h4>
+                </div>
+                <div className="skills-pills">
+                  <span className="skill-pill">Machine Learning</span>
+                  <span className="skill-pill">Deep Learning</span>
+                  <span className="skill-pill">AI Engineering</span>
+                  <span className="skill-pill">Python</span>
+                  <span className="skill-pill">Data Analysis</span>
+                  <span className="skill-pill">Statistics</span>
+                </div>
+              </div>
+              <div className="skills-col skills-col-ai-full">
+                <div className="skills-col-header">
+                  <FaBrain className="skills-col-icon" />
+                  <h4>AI Engineer</h4>
+                </div>
+                <div className="skills-pills">
+                  <span className="skill-pill">NLP</span>
+                  <span className="skill-pill">LLMs</span>
+                  <span className="skill-pill">YOLO</span>
+                  <span className="skill-pill">MLOps</span>
+                  <span className="skill-pill">PyTorch</span>
+                  <span className="skill-pill">TensorFlow</span>
+                  <span className="skill-pill">Computer Vision</span>
+                  <span className="skill-pill">Prompt Engineering</span>
+                  <span className="skill-pill">LLM Fine-tuning</span>
+                  <span className="skill-pill">Cloud Deployment</span>
                 </div>
               </div>
             </div>
           </motion.div>
           <div className="about-divider"></div>
-          <motion.div 
+          <motion.div
             initial={{ x: 50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}  
+            whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeInOut" }} 
+            transition={{ duration: 0.6, ease: "easeInOut" }}
             className="about-right">
             <div className="profile-image-container">
               <img src={Profile} alt="Aly El-Badry - AI Engineer & Full-Stack Developer" className='My-Image' />
@@ -225,50 +248,11 @@ const Home = () =>{
       </div>
 
 
+      {/* 3rd Page */}
       <div className="title">Experience</div>
       <hr />
       <div className="experience-container">
-        <motion.div 
-          initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}  
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }} 
-          className="experience-card"
-        >
-          <div className="experience-content">
-            <div className="experience-main">
-              <div className="experience-header">
-                <div className="company-info">
-                  <h2>VirtuFirm</h2>
-                  <div className="job-info">
-                    <p className="job-title">Founder & Tech Visionary</p>
-                    <p className="duration">January 2025 - Present</p>
-                  </div>
-                </div>
-              </div>
-              <div className="experience-details">
-                <h3>Key Responsibilities & Achievements</h3>
-                <ul>
-                  <li>Founded and lead a thriving tech community focused on innovation and knowledge sharing</li>
-                  <li>Organize and conduct AI workshops and tech events for community members</li>
-                  <li>Drive the community's vision and growth through strategic initiatives</li>
-                  <li>Mentor aspiring developers and AI enthusiasts in their tech journey</li>
-                </ul>
-              </div>
-            </div>
-            <div className="company-logo">
-              <motion.img 
-                src={virtufirm} 
-                alt="VirtuFirm Logo" 
-                initial={{ scale: 0.8, opacity: 0 }} 
-                whileInView={{ scale: 1, opacity: 1 }} 
-                viewport={{ once: true }} 
-                transition={{ duration: 0.5 }}
-              />
-            </div>
-          </div>
-        </motion.div>
-
+        {/* 1st Experiance */}
         <motion.div 
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}  
@@ -310,6 +294,9 @@ const Home = () =>{
           </div>
         </motion.div>
 
+
+        
+        {/* 2nd Experiance */}
         <motion.div 
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}  
@@ -351,6 +338,7 @@ const Home = () =>{
           </div>
         </motion.div>
 
+        {/* 3rd Experiance. */}
         <motion.div 
           initial={{ y: 100, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}  
@@ -392,7 +380,9 @@ const Home = () =>{
           </div>
         </motion.div>
       </div>
-      {/* Achievements & Prizes Section */}
+
+
+      {/* Hackathon 4th Page. */}
       <div className="title">Achievements & Prizes</div>
       <hr />
       <div className="achievements-section">
@@ -470,6 +460,7 @@ const Home = () =>{
         ))}
       </div>
 
+      {/*  5th Page. */}
       <div className="title">Education</div>
       <hr />
       <motion.div initial={{ y: 100, opacity: 0 }}
@@ -505,52 +496,8 @@ const Home = () =>{
         </div>
       </motion.div>
 
-      <div className="title"> VirtuFirm</div>
-      <hr />
-      <motion.div initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}  
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.6, ease: "easeOut" }} className="virtufirm">
-        <div className="virtufirm-content">
-          <div className="virtufirm-header">
-            <img src={virtufirm} alt="VirtuFirm Logo" className="virtufirm-logo" />
-            <div className="virtufirm-text">
-              <h2>Founder & Tech Visionary</h2>
-              <p>
-                As the founder of VirtuFirm, I've built a thriving tech community from the ground up, 
-                fostering innovation and knowledge sharing. Our mission is to bridge the gap between 
-                academia and industry through cutting-edge projects, workshops, and networking events.
-              </p>
-            </div>
-          </div>
 
-          <div className="virtufirm-focus">
-            <div className="focus-card">
-              <FaBrain className="virtufirm-icon" />
-              <h3>Leadership</h3>
-              <p>Leading a team of passionate tech enthusiasts and driving the community's vision forward.</p>
-            </div>
-            <div className="focus-card">
-              <FaCode className="virtufirm-icon" />
-              <h3>Technical Excellence</h3>
-              <p>Setting high standards in software development and AI implementation across projects.</p>
-            </div>
-            <div className="focus-card">
-              <FaUsers className="virtufirm-icon" />
-              <h3>Community Growth</h3>
-              <p>Expanding our network and creating opportunities for members to excel in tech.</p>
-            </div>
-            <div className="focus-card">
-              <FaRocket className="virtufirm-icon" />
-              <h3>Innovation</h3>
-              <p>Pioneering new approaches to tech education and industry collaboration.</p>
-            </div>
-          </div>
-
-          
-        </div>
-      </motion.div>
-
+      {/* 6th Page. */}
       <div className="title">Student Activities</div>
       <hr />
       <div className="activity">
@@ -568,7 +515,7 @@ const Home = () =>{
       ))}
     </div>
 
-    {/* Student Activities Media Section (no title, no hr) */}
+    {/* 7th Part  */}
     <motion.div 
       initial={{ y: 50, opacity: 0 }}
       whileInView={{ y: 0, opacity: 1 }}  
@@ -702,7 +649,9 @@ const Home = () =>{
       </motion.div>
     )}
 
-      
+
+
+      {/* 8th Part Skills */}
       <div className='title'>Skills and Services</div>
       <hr />
       
