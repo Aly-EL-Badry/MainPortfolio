@@ -6,17 +6,88 @@ const projects = [
   {
     title: "AI Project",
     items: [
+      
+      {
+        links: [
+          { label: "Docker Image", url: "https://hub.docker.com/r/alyelbadry/disaster-prediction-api" },
+          { label: "GitHub", url: "https://github.com/Aly-EL-Badry/DisasterPrediction" },
+        ],
+        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1756504675321_cd6x1g.jpg",
+        alt: "Disaster Detection",
+        main: "Disaster Detection Project",
+        sub: "Detects and classifies natural disasters from social media data",
+        tags: ["Python", "Mlops", "Deep Learning", "Machine learning", "Docker", "Zenml", "mlflow", "DVC", "Pipeline Development", "FastAPI", "CI/CD"],
+        images: [
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1756504675321_cd6x1g.jpg",
+            'https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723379/1756504674549_kvxvfx.jpg',
+            "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723379/1756504675811_wvtrhc.jpg",
+            "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723379/1756504673868_tlns2z.jpg",
+            "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723379/1756504673465_dkndm8.jpg",
+        ],
+        details: {
+          problem: `Natural disasters, including earthquakes, floods, hurricanes, and wildfires, strike unexpectedly and often cause widespread damage, affecting millions of people globally. Rapid identification and response are critical for saving lives, minimizing damage, and mobilizing emergency services efficiently. Social media platforms such as Twitter have become vital sources of real-time information during disasters, but manually monitoring and analyzing thousands of posts is impossible. Furthermore, images shared online can provide immediate visual evidence of the disaster, yet categorizing and validating this information quickly is challenging. Without an automated system, authorities risk delays, miscommunication, and inefficient resource allocation.`,
+          solution: `The Disaster Detection Project addresses this challenge by building an AI model that can automatically detect and classify disaster-related information from social media. The system ingests real-time posts and images, cleans and preprocesses the textual data, and applies deep learning models to determine whether a post is relevant to a disaster event. Images are analyzed using convolutional neural networks to identify visual evidence of damage or hazards. The project then categorizes the disaster type, generates alerts, and compiles actionable insights for first responders and emergency teams. By automating the monitoring process, it enables faster decision-making, improves situational awareness, and enhances the ability to respond to crises effectively. This project combines Python, TensorFlow, Keras, OpenCV, and NLP libraries like NLTK to create an end-to-end solution that transforms raw social media data into actionable intelligence.`
+        }
+      },
+      {
+        links: [
+          { label: "View Ml and mlops", url: "https://github.com/Aly-EL-Badry/Flight-Delay-Prediction-MLops" },
+          { label: "view Backend", url: "https://github.com/Aly-EL-Badry/FlightPrediction-Backend" },
+          { label: "view Frontend", url: "https://github.com/Aly-EL-Badry/Flight-delay-prediction-Front-End" },
+        ],
+        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711584/1770334911378_mf9yre.jpg",
+        alt: "Flight Delay Prediction",
+        main: "Flight Delay Prediction",
+        sub: "Predicts flight delays using historical flight data",
+        tags: ["Python", "Machine Learning", "Deep Learning", "Mlops", "Docker", "Zenml", "mlflow", "DVC", "Pipeline Development", "FastAPI", "CI/CD", "React", "Django", "Fast API", "Database", "Tailwind", "System Architecture"],
+        images: [
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723766/1770334908825_lp5e7b.jpg",
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771723766/1770334909585_erqell.jpg",
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1770334910381_m8ot2u.jpg",
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1770334910280_sszgak.jpg",
+          "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1770334910552_n0se5o.jpg",
+        ],
+        details: {
+          problem: `Flight delays are one of the most common and frustrating issues faced by passengers and airlines alike. Unpredictable delays can lead to missed connections, increased travel costs, dissatisfied customers, and operational inefficiencies for airlines. Delays often result from multiple complex factors, including weather conditions, air traffic congestion, technical issues, and scheduling conflicts. Traditional methods for predicting delays are limited and often reactive, relying on historical patterns without adapting to new, dynamic variables. As flights increase worldwide, there is a growing need for a proactive, data-driven approach that accurately forecasts delays to improve customer experience and operational efficiency.`,
+          solution: `The Flight Delay Prediction Project tackles this problem by leveraging historical flight data to build predictive models capable of estimating the likelihood and duration of flight delays. The project collects and preprocesses data such as flight schedules, airline routes, weather conditions, and historical delays, and applies feature engineering to highlight patterns that correlate with delays. Machine learning models, including regression and classification algorithms, are trained to predict potential delays and provide probabilistic forecasts. The solution allows passengers to plan more effectively and helps airlines optimize scheduling, manage resources, and minimize disruption. Technologies like Python, Scikit-Learn, Pandas, NumPy, Matplotlib, and Seaborn are used to clean, analyze, visualize, and model the data, ensuring the predictions are interpretable and actionable. By offering a predictive approach, the project transforms reactive flight management into a proactive strategy.`
+        }
+      },
+      {
+        link: "https://github.com/Aly-EL-Badry/Chat-MD",
+        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711584/Gemini_Generated_Image_ak0dsaak0dsaak0d_yjpha4.png",
+        alt: "Chat MD - Star Union Edition",
+        main: "Chat MD",
+        sub: "Internal AI architect for Star Union’s weekly content and task structuring",
+        tags: ["Django", "LLM", "Prompt Engineering", "Star Union", "Workflow Automation", "Gemini", "AI Architect", "Markdown", "Content Engineering"], 
+        details: {
+          problem: `Managing the weekly flow of content and tasks within Star Union often leads to communication gaps. When raw project ideas and weekly assignments aren't properly structured, members can struggle to understand their specific responsibilities, leading to inconsistent execution and lost time. Manual formatting of these complex weekly updates is a bottleneck that prevents the team from moving quickly from planning to action.`,
+          solution: `Chat MD serves as the structural backbone for Star Union's internal operations. It specifically transforms raw weekly goals and content ideas into highly organized, professional Markdown documentation. By automating the creation of clear task lists, structured content skeletons, and member-focused guides, it ensures every team member knows exactly what to do. This specialized tool bridges the gap between high-level planning and member clarity, ensuring Star Union's output remains consistent, readable, and perfectly formatted every week.`
+        }
+      },
+      {
+        link: "https://github.com/Aly-EL-Badry/Email-Automation-System",
+        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711583/1769892935201_hum8hu.jpg",
+        alt: "HR Email Classification Automation",
+        main: "HR-Email-Classification-Automation",
+        sub: "An NLP-Based Intelligent System for Automating HR Email Categorization and Routing",
+        tags: ["Email Classification", "Ai Automation", "Real-World Problem", "Star Union"],
+        details: {
+          problem: `Human Resources departments in medium and large organizations receive a high volume of emails daily, including job applications, leave requests, payroll inquiries, complaints, policy questions, and internal communications. Manually reading, categorizing, and routing these emails to the appropriate department or personnel is time-consuming, repetitive, and prone to human error. Misclassification or delayed responses can negatively impact employee satisfaction, recruitment efficiency, and overall organizational productivity. As companies scale, the need for an intelligent, automated system to streamline HR communication workflows becomes increasingly critical.`,
+      
+          solution: `The HR Email Classification Automation project introduces an AI-driven NLP solution that automatically analyzes, classifies, and routes incoming HR-related emails into predefined categories such as recruitment, payroll, leave management, complaints, and general inquiries. The system leverages advanced Natural Language Processing techniques including text preprocessing, tokenization, TF-IDF/word embeddings, and supervised machine learning or deep learning models for accurate classification. Built using Python, scikit-learn, and TensorFlow/PyTorch, the model is trained on labeled HR email datasets to ensure high precision and recall across categories. The system can be integrated with company email servers or HR management platforms to automatically forward emails to the correct department, generate priority flags, and reduce manual workload. This solution enhances operational efficiency, accelerates response times, minimizes misrouting errors, and supports scalable HR process automation.`
+        }
+      },
       {
         link: "https://github.com/Aly-EL-Badry/Pothole-Detection",
         img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745155110/pothole_detection_1_nqaolw.webp",
         alt: "pothole Detection",
         main: "Pothole-Detection",
         sub: "A Object Detection Model For Potholes in the Streets",
-        tags: ["YOLO", "Computer Vision", "Deep Learning"],
+        tags: ["YOLO", "Computer Vision", "Deep Learning", "Object Detection", "Real-Problem"],
         details: {
-          problem: `Potholes are a common issue in urban and rural roadways worldwide, posing serious hazards to vehicles and pedestrians alike. They cause damage to tires, suspensions, and other vehicle components, lead to traffic congestion, and increase the risk of accidents. For city authorities and road maintenance teams, identifying potholes efficiently and prioritizing repairs is a major challenge. Traditional methods rely on manual inspections, which are time-consuming, labor-intensive, and prone to human error. Furthermore, manual monitoring often fails to provide real-time data, making it difficult to respond promptly to emerging hazards. As cities grow and traffic increases, there is a pressing need for an automated, scalable solution that can continuously monitor roads and detect potholes accurately.`,
-          
-          solution: `The Pothole Detection project addresses this problem by leveraging computer vision and deep learning techniques to automatically identify potholes from road images. Using the YOLO (You Only Look Once) object detection framework, the system can process images captured by cameras mounted on vehicles or drones in real-time, accurately detecting potholes and localizing their positions on the road. The model is trained on a diverse dataset of road conditions to recognize potholes of varying sizes, shapes, and lighting conditions. Detected potholes can be mapped geographically, allowing maintenance teams to prioritize repairs based on severity and location. This automated solution significantly reduces the need for manual inspection, improves road safety, and enables proactive maintenance strategies. The project uses Python, OpenCV, TensorFlow, and YOLO for image processing, model training, and deployment, providing a robust and efficient tool for modern road infrastructure management.`
+          problem: `Potholes represent a critical and persistent challenge across urban and rural road networks worldwide. They pose significant safety risks to drivers and pedestrians, contribute to vehicle damage such as tire and suspension failure, and increase traffic congestion and accident rates. For municipalities and infrastructure authorities, timely detection and prioritization of pothole repairs remains a complex operational problem. Traditional inspection methods rely heavily on manual surveys, which are labor-intensive, costly, time-consuming, and susceptible to human oversight. Moreover, these approaches lack real-time monitoring capabilities, delaying response times to emerging road hazards. With expanding cities and rising traffic density, there is an urgent demand for an intelligent, automated, and scalable solution capable of continuously monitoring road conditions and detecting potholes with high accuracy.`,
+        
+          solution: `The Pothole Detection project introduces an AI-powered solution that leverages advanced computer vision and deep learning techniques to automatically identify and localize potholes from road imagery. Built using the YOLO (You Only Look Once) object detection framework, the system processes images captured from vehicle-mounted cameras or drones in real time, ensuring rapid and accurate detection. The model is trained on a diverse dataset encompassing various road types, lighting conditions, and pothole characteristics to ensure robustness and generalization. Detected potholes can be geotagged and mapped, enabling authorities to prioritize maintenance based on severity, frequency, and location. By minimizing reliance on manual inspections, this solution enhances road safety, reduces operational costs, and supports proactive infrastructure management. The system is developed using Python, OpenCV, TensorFlow, and YOLO, delivering a scalable and production-ready tool for smart city road monitoring.`
         }
       },
       {
@@ -25,61 +96,13 @@ const projects = [
         alt: "NY Taxi",
         main: "New york Taxi Dashboard",
         sub: "Dashboard That Show analysis for Taxi Target in NewYork",
-        tags: ["Data Visualization", "Dash", "Plotly"],
+        tags: ["Data Visualization", "Dash", "Plotly", "Data Analysis", ""],
         details: {
           problem: `New York City operates one of the largest taxi fleets in the world, with millions of trips occurring each year. For taxi operators, drivers, and policymakers, understanding trends in ride demand, peak hours, geographic hotspots, and revenue generation is critical. However, the raw taxi trip data is massive, often containing millions of records with timestamps, pickup/dropoff locations, fares, and passenger counts. Analyzing this data manually is impractical, time-consuming, and prone to errors. Without a clear visualization, it is difficult to identify patterns, monitor driver performance, optimize routes, or make data-driven business decisions. This lack of insight can lead to inefficiencies, reduced profitability, and poor customer satisfaction.`,
           
           solution: `The New York Taxi Dashboard project solves this problem by creating an interactive data visualization platform that provides actionable insights from large-scale taxi trip data. The dashboard aggregates and visualizes key metrics such as trip counts, revenue, passenger distribution, and geographic hotspots on an interactive map of New York City. Users can filter data by date, time, or location to analyze trends and identify peak demand areas. Advanced visualizations such as line charts, heatmaps, and bar plots are used to display temporal and spatial patterns clearly. Built with Python, Dash, and Plotly, the dashboard allows real-time interaction and responsive exploration of the data. By converting raw trip records into visual insights, this project enables taxi companies and operators to optimize driver allocation, improve service efficiency, plan promotions, and ultimately enhance the customer experience. The solution transforms complex, large datasets into a comprehensible and actionable tool for decision-making in urban transportation.`
         }
       },
-      {
-        link: "https://github.com/Aly-EL-Badry/DisasterPrediction",
-        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711582/1756504675321_cd6x1g.jpg",
-        alt: "Disaster Detection",
-        main: "Disaster Detection Project",
-        sub: "Detects and classifies natural disasters from social media data",
-        tags: ["Python", "Mlops", "Deep Learning"],
-        details: {
-          problem: `Natural disasters, including earthquakes, floods, hurricanes, and wildfires, strike unexpectedly and often cause widespread damage, affecting millions of people globally. Rapid identification and response are critical for saving lives, minimizing damage, and mobilizing emergency services efficiently. Social media platforms such as Twitter have become vital sources of real-time information during disasters, but manually monitoring and analyzing thousands of posts is impossible. Furthermore, images shared online can provide immediate visual evidence of the disaster, yet categorizing and validating this information quickly is challenging. Without an automated system, authorities risk delays, miscommunication, and inefficient resource allocation.`,
-          solution: `The Disaster Detection Project addresses this challenge by leveraging Natural Language Processing (NLP) and computer vision techniques to automatically detect and classify disaster-related information from social media. The system ingests real-time posts and images, cleans and preprocesses the textual data, and applies deep learning models to determine whether a post is relevant to a disaster event. Images are analyzed using convolutional neural networks to identify visual evidence of damage or hazards. The project then categorizes the disaster type, generates alerts, and compiles actionable insights for first responders and emergency teams. By automating the monitoring process, it enables faster decision-making, improves situational awareness, and enhances the ability to respond to crises effectively. This project combines Python, TensorFlow, Keras, OpenCV, and NLP libraries like NLTK to create an end-to-end solution that transforms raw social media data into actionable intelligence.`
-        }
-      },
-      {
-        link: "https://github.com/Aly-EL-Badry/Flight-Delay-Prediction-MLops",
-        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711584/1770334911378_mf9yre.jpg",
-        alt: "Flight Delay Prediction",
-        main: "Flight Delay Prediction",
-        sub: "Predicts flight delays using historical flight data",
-        tags: ["Python", "Machine Learning", "Deep Learning", "Mlops"],
-        details: {
-          problem: `Flight delays are one of the most common and frustrating issues faced by passengers and airlines alike. Unpredictable delays can lead to missed connections, increased travel costs, dissatisfied customers, and operational inefficiencies for airlines. Delays often result from multiple complex factors, including weather conditions, air traffic congestion, technical issues, and scheduling conflicts. Traditional methods for predicting delays are limited and often reactive, relying on historical patterns without adapting to new, dynamic variables. As flights increase worldwide, there is a growing need for a proactive, data-driven approach that accurately forecasts delays to improve customer experience and operational efficiency.`,
-          solution: `The Flight Delay Prediction Project tackles this problem by leveraging historical flight data to build predictive models capable of estimating the likelihood and duration of flight delays. The project collects and preprocesses data such as flight schedules, airline routes, weather conditions, and historical delays, and applies feature engineering to highlight patterns that correlate with delays. Machine learning models, including regression and classification algorithms, are trained to predict potential delays and provide probabilistic forecasts. The solution allows passengers to plan more effectively and helps airlines optimize scheduling, manage resources, and minimize disruption. Technologies like Python, Scikit-Learn, Pandas, NumPy, Matplotlib, and Seaborn are used to clean, analyze, visualize, and model the data, ensuring the predictions are interpretable and actionable. By offering a predictive approach, the project transforms reactive flight management into a proactive strategy.`
-        }
-      },
-      // {
-      //   link: "https://github.com/Aly-EL-Badry/AGNews-Classifier",
-      //   img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1760000006/agnews.webp",
-      //   alt: "AGNews Text Classification",
-      //   main: "AGNews Classifier",
-      //   sub: "Classifies news articles into predefined categories using NLP",
-      //   tags: ["Python", "NLP", "Deep Learning"],
-      //   details: {
-      //     problem: `The rapid growth of online news content makes it extremely difficult for readers, editors, and journalists to manually categorize and filter articles for timely consumption. News platforms publish thousands of articles daily across multiple categories such as World, Business, Sports, and Science/Technology. Without automation, sorting these articles is inefficient and error-prone, resulting in delays in delivering relevant information to readers, poor user experience, and missed opportunities for targeted content delivery. Manual classification is labor-intensive and cannot scale to meet the demand of modern news platforms.`,
-      //     solution: `The AGNews Classifier Project solves this problem by building an automated text classification system that accurately categorizes news articles into predefined categories. The project leverages Natural Language Processing (NLP) techniques and deep learning models to process textual content, extracting meaningful features that capture context, semantics, and intent. Preprocessing steps include tokenization, normalization, and embedding generation. Transformers and PyTorch models are trained on the AGNews dataset to classify articles efficiently and accurately. The solution allows news platforms to automatically organize content, deliver personalized feeds to users, and enhance the speed and quality of information dissemination. The technology stack includes Python, PyTorch, HuggingFace Transformers, NLTK, and Scikit-Learn for modeling, preprocessing, and evaluation. This approach reduces manual labor, improves scalability, and ensures that readers receive timely, categorized news content.`
-      //   }
-      // },
-      {
-        link: "https://github.com/Aly-EL-Badry/Chat-MD",
-        img: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1771711584/Gemini_Generated_Image_ak0dsaak0dsaak0d_yjpha4.png",
-        alt: "Chat MD",
-        main: "Chat MD",
-        sub: "AI-powered chatbot for medical questions and advice",
-        tags: ["Python", "NLP", "Transformers", "AI Chatbot"],
-        details: {
-          problem: `Access to reliable medical information is a challenge for many people. Patients often have medical questions that require accurate guidance, but consulting a professional is not always immediately possible due to cost, location, or time constraints. Additionally, the volume of medical information online can be overwhelming and sometimes misleading, leading to confusion or wrong self-diagnosis. There is a need for a trustworthy, automated system that can provide preliminary medical insights based on established knowledge and trained models.`,
-          solution: `The Chat MD Project addresses this by developing an AI chatbot capable of understanding medical questions, providing relevant answers, and offering guidance on common conditions. The system leverages Natural Language Processing (NLP) and pre-trained transformer models to interpret queries, retrieve relevant information from curated medical knowledge bases, and respond in a clear and accurate manner. The chatbot is designed to assist users in obtaining preliminary insights, recommending next steps, and improving awareness of medical conditions. Python, HuggingFace Transformers, PyTorch, and NLP libraries such as SpaCy are used for text processing, model training, and response generation. By providing an interactive, AI-driven interface, Chat MD helps bridge the gap between patients and accessible medical information, ensuring safe and reliable guidance.`
-        }
-      }
     ],
   },
   {
@@ -207,11 +230,48 @@ const projects = [
 const Project = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const [selectedImageUrl, setSelectedImageUrl] = useState(null);
+  const [heroHeightPercent, setHeroHeightPercent] = useState(20);
+  const heroTouchYRef = React.useRef(null);
+  const heroRef = React.useRef(null);
 
   const closeModal = useCallback(() => {
     setSelectedProject(null);
     setSelectedImageUrl(null);
+    setHeroHeightPercent(20);
   }, []);
+
+  const handleHeroTouchStart = useCallback((e) => {
+    heroTouchYRef.current = e.touches[0].clientY;
+  }, []);
+
+  const handleHeroTouchEnd = useCallback(() => {
+    heroTouchYRef.current = null;
+  }, []);
+
+  useEffect(() => {
+    const el = heroRef.current;
+    if (!el || !selectedProject) return;
+    const onWheel = (e) => {
+      e.preventDefault();
+      setHeroHeightPercent((p) => Math.min(50, Math.max(20, p + (e.deltaY > 0 ? -2 : 2))));
+    };
+    const onTouchMove = (e) => {
+      if (heroTouchYRef.current == null) return;
+      e.preventDefault();
+      const dy = e.touches[0].clientY - heroTouchYRef.current;
+      heroTouchYRef.current = e.touches[0].clientY;
+      setHeroHeightPercent((p) => Math.min(50, Math.max(20, p + (dy > 0 ? -1.2 : 1.2))));
+    };
+    el.addEventListener('wheel', onWheel, { passive: false });
+    el.addEventListener('touchmove', onTouchMove, { passive: false });
+    return () => {
+      el.removeEventListener('wheel', onWheel);
+      el.removeEventListener('touchmove', onTouchMove);
+    };
+  }, [selectedProject]);
+
+  const expandHero = useCallback(() => setHeroHeightPercent(50), []);
+  const collapseHero = useCallback(() => setHeroHeightPercent(20), []);
 
   useEffect(() => {
     const handleEscape = (e) => {
@@ -220,6 +280,7 @@ const Project = () => {
     if (selectedProject) {
       document.addEventListener('keydown', handleEscape);
       document.body.style.overflow = 'hidden';
+      setHeroHeightPercent(20);
       const imgs = selectedProject.images || [selectedProject.img];
       setSelectedImageUrl(imgs[0] || selectedProject.img);
     }
@@ -452,7 +513,7 @@ const Project = () => {
                   <p className="main">{item.main}</p>
                   <p className="sub">{item.sub}</p>
                   <div className="tags">
-                    {item.tags && item.tags.map((tag, tagIndex) => (
+                    {item.tags && item.tags.slice(0, 3).map((tag, tagIndex) => (
                       <span key={tagIndex} className="tag">{tag}</span>
                     ))}
                   </div>
@@ -492,7 +553,39 @@ const Project = () => {
                 </svg>
               </button>
 
-              <div className="project-modal-hero">
+              <div
+                ref={heroRef}
+                className="project-modal-hero project-modal-hero-swipeable"
+                style={{ height: `${heroHeightPercent}vh`, minHeight: heroHeightPercent >= 40 ? 200 : 140 }}
+                onTouchStart={handleHeroTouchStart}
+                onTouchEnd={handleHeroTouchEnd}
+                onTouchCancel={handleHeroTouchEnd}
+              >
+                <div className="project-modal-hero-resize-btns">
+                  <button
+                    type="button"
+                    className="project-modal-hero-resize-btn"
+                    onClick={(e) => { e.stopPropagation(); collapseHero(); }}
+                    disabled={heroHeightPercent <= 20}
+                    aria-label="Collapse image"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M18 15l-6-6-6 6" />
+                    </svg>
+                  </button>
+                  <button
+                    type="button"
+                    className="project-modal-hero-resize-btn"
+                    onClick={(e) => { e.stopPropagation(); expandHero(); }}
+                    disabled={heroHeightPercent >= 50}
+                    aria-label="Expand image"
+                  >
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M6 9l6 6 6-6" />
+                    </svg>
+                  </button>
+                </div>
+                <span className="project-modal-hero-hint">Scroll or swipe to resize</span>
                 <img
                   src={selectedImageUrl || selectedProject.img}
                   alt={selectedProject.alt}
@@ -550,17 +643,22 @@ const Project = () => {
                       ))}
                     </div>
                   </div>
-                  <a
-                    href={selectedProject.link}
-                    className="project-modal-link-btn"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <span>View project</span>
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                      <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
-                    </svg>
-                  </a>
+                  <div className="project-modal-links">
+                    {(selectedProject.links || [{ label: "View project", url: selectedProject.link }]).map((l, i) => (
+                      <a
+                        key={i}
+                        href={l.url}
+                        className="project-modal-link-btn"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <span>{l.label}</span>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                          <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3" />
+                        </svg>
+                      </a>
+                    ))}
+                  </div>
                 </div>
               </div>
             </motion.div>
