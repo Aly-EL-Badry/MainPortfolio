@@ -364,11 +364,11 @@
 
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .describiton { padding: 4rem 2rem; }
+  .describiton { padding: 5rem 2rem 4rem; }
 
   .cert-details {
     flex-direction: column;
-    text-align: center;
+    text-align: left;
     gap: 2rem;
   }
 
@@ -385,7 +385,7 @@
 }
 
 @media (max-width: 768px) {
-  .describiton { padding: 2rem 1rem; }
+  .describiton { padding: 6rem 1rem 2rem; }
   .text-container { min-height: 80px; }
   .big-text { font-size: clamp(30px, 7vw, 50px); }
   .title-text { font-size: clamp(20px, 4vw, 28px); }
@@ -403,14 +403,14 @@
   .cert-details .text { padding: 0.3rem; }
   .cert-details .text > h1 { font-size: clamp(24px, 5vw, 40px); margin-bottom: 0.5rem; }
   .cert-details .text > h2 { font-size: clamp(16px, 3.5vw, 22px); }
-  .cert-details .text .sup-title { font-size: clamp(14px, 3vw, 16px); margin: 0.3rem 1rem; }
+  .cert-details .text .sup-title { font-size: clamp(14px, 3vw, 16px); margin: 0.3rem 0; }
   .cert-details .text .d, .cert-details .text > ul { font-size: clamp(13px, 2.5vw, 14px); line-height: 1.4; }
   .cert-details .text > ul li { padding-left: 15px; margin-bottom: 0.3rem; }
   .cert-details .text .sup-title::before { left: -12px; }
 }
 
 @media (max-width: 480px) {
-  .describiton { padding: 1.5rem 0.8rem; }
+  .describiton { padding: 6rem 0.8rem 1.5rem; }
   .text-container { min-height: 60px; }
   .big-text { font-size: clamp(24px, 6vw, 40px); }
   .title-text { font-size: clamp(18px, 3.5vw, 24px); }
@@ -421,7 +421,7 @@
   .cert-details .text { padding: 0.2rem; }
   .cert-details .text > h1 { font-size: clamp(22px, 4.5vw, 35px); }
   .cert-details .text > h2 { font-size: clamp(15px, 3vw, 20px); }
-  .cert-details .text .sup-title { font-size: clamp(13px, 2.5vw, 14px); margin: 0.2rem 0.8rem; }
+  .cert-details .text .sup-title { font-size: clamp(13px, 2.5vw, 14px); margin: 0.2rem 0; }
   .cert-details .text .d, .cert-details .text > ul { font-size: clamp(12px, 2.2vw, 13px); line-height: 1.3; }
   .cert-details .text > ul li { padding-left: 12px; margin-bottom: 0.2rem; }
   .cert-details .text .sup-title::before { left: -10px; }
