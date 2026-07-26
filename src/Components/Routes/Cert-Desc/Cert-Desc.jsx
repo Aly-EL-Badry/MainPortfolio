@@ -43,7 +43,12 @@ const CertDesc = () => {
   const { certId } = useParams();
   const titleRef = useFitText(60, 18);
   
-  const cert = certificates.find(({ alt }) => alt === certId);
+  const decodedCertId = certId ? decodeURIComponent(certId) : '';
+  const cert = certificates.find(({ alt }) => 
+    alt === certId || 
+    alt === decodedCertId ||
+    alt.toLowerCase() === decodedCertId.toLowerCase()
+  );
   
   // If certificate not found, show error page
   if (!cert) {
