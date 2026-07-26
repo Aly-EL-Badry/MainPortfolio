@@ -506,14 +506,41 @@ export const certificates = [
 // When adding a new certificate, add its alt to the correct list below.
 // Anything not listed in any category will automatically appear in "Others".
 
-const importantAlts = ['hcia', 'Git', 'AICE', 'DEPI', 'Tailwind Specialization'];
-
-const webDevAlts = [
-  'Django', 'intro to front end', 'Tailwind Practical', 'Tailwind Basics',
-  'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS',
+const importantAlts = [
+  'DEPI',
+  'Natural Language Processing Specialization',
+  'Machine Learning in Production',
+  'Git',
+  'hcia'
 ];
 
-const aiDevAlts = ['python', 'Pandas', 'data-cleaning', 'intro-to-machine', 'Dotpy', 'Supervised Learning: Regression and Classification'];
+const webDevAlts = [
+  'Tailwind Specialization',
+  'Django',
+  'intro to front end',
+  'Intro to Backend',
+  'Version Control',
+  'Intro to DataBase',
+  'Programming in Python',
+  'HTML-CSS',
+  'Tailwind Practical',
+  'Tailwind Basics',
+];
+
+const aiDevAlts = [
+  'Natural Language Processing with Attention Models',
+  'Natural Language Processing with Sequence Models',
+  'CrewAI',
+  'Natural Language Processing with Probabilistic Models',
+  'Natural Language Processing with Classification and Vector Spaces',
+  'Retrieval Augmented Generation (RAG)',
+  'Supervised Learning: Regression and Classification',
+  'Dotpy',
+  'python',
+  'Pandas',
+  'data-cleaning',
+  'intro-to-machine',
+];
 
 const allCategorized = [...importantAlts, ...webDevAlts, ...aiDevAlts];
 
@@ -522,3 +549,4 @@ export const importantCertificates      = certificates.filter(c => importantAlts
 export const webDevelopmentCertificates = certificates.filter(c => webDevAlts.includes(c.alt));
 export const aiDevelopmentCertificates  = certificates.filter(c => aiDevAlts.includes(c.alt));
 export const otherCertificates          = certificates.filter(c => !allCategorized.includes(c.alt));
+
