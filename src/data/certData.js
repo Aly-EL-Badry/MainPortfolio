@@ -23,6 +23,16 @@ const depi               = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1
 const tailwindPractical  = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783986/Tailwind_Practical_project_zvacda.png"
 const tailwindBasics     = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783985/Tailwind_Basics_vruvpl.png"
 const tailwindSpecialization = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1752783980/Tailwind_Specialization_ztmvry.png"
+const supervisedMachineLearning = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054999/Supervised_Learning_gmamlf.png"
+const rag = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Rag_xxjdg5.png"
+const machineLearningInProduction = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Machine_learning_in_production_mmcobg.png"
+const multiAgentSystemsCrewAI = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Crew_AI_fmkqvk.png"
+const nlpClassificationVectorSpaces = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054999/Vector_Space_bespik.png"
+const nlpSequenceModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Sequential_models_er7gse.png"
+const nlpProbabilisticModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Propalistic_model_vybtf4.png"
+const nlpSpecialization = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/NLP_specializiation_uzmfmg.png"
+const nlpAttentionModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054999/Attention_model_uk0ntd.png"
+
 
 // ─── All Certificates ─────────────────────────────────────────────────────────
 // Fields used by:
@@ -51,6 +61,32 @@ export const certificates = [
     ]
   },
   {
+    img: nlpSpecialization,
+    alt: "Natural Language Processing Specialization",
+    main: "Natural Language Processing Specialization",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A comprehensive specialization covering classical machine learning and state-of-the-art deep learning techniques for building advanced NLP systems.",
+    takeaways: [
+      "Mastering classical machine learning and deep learning techniques for Natural Language Processing.",
+      "Designing applications for question-answering and sentiment analysis.",
+      "Creating tools for language translation and text summarization.",
+      "Applying classification, vector spaces, probabilistic models, sequence models, and attention models."
+    ]
+  },
+    {
+    img: machineLearningInProduction,
+    alt: "Machine Learning in Production",
+    main: "Machine Learning in Production",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course focusing on the practical challenges of deploying machine learning models into production environments, covering MLOps methodologies, pipeline automation, and model monitoring.",
+    takeaways: [
+      "Understanding the end-to-end lifecycle of a machine learning project in production.",
+      "Building scalable and automated data pipelines.",
+      "Implementing MLOps best practices for model deployment and serving.",
+      "Monitoring deployed models for data drift and concept drift."
+    ]
+  },
+  {
     img: Git,
     alt: "Git",
     main: "Intro to Git and Github",
@@ -62,20 +98,6 @@ export const certificates = [
       "Creating and managing repositories on GitHub.",
       "Using branches for feature development and collaboration.",
       "Handling merge conflicts and contributing to open-source projects."
-    ]
-  },
-  {
-    img: tailwindSpecialization,
-    alt: "Tailwind Specialization",
-    main: "Tailwind Specialization",
-    sub: "From: Coursera",
-    description: "A specialization focused on advanced Tailwind CSS techniques for building modern, responsive web interfaces.",
-    takeaways: [
-      "Mastering advanced Tailwind CSS utilities and configuration.",
-      "Building scalable and maintainable design systems.",
-      "Implementing custom themes and responsive layouts.",
-      "Optimizing performance and accessibility with Tailwind.",
-      "Completing real-world projects using Tailwind CSS."
     ]
   },
   {
@@ -92,21 +114,21 @@ export const certificates = [
       "Developing AI models using Huawei's computing platforms."
     ]
   },
+  // ── Web Development ───────────────────────────────────────────────────────────
   {
-    img: aice,
-    alt: "AICE",
-    main: "AI Career Essential",
-    sub: "From: Alx",
-    description: "A practical AI career-oriented course covering essential skills in artificial intelligence and data science.",
+    img: tailwindSpecialization,
+    alt: "Tailwind Specialization",
+    main: "Tailwind Specialization",
+    sub: "From: Coursera",
+    description: "A specialization focused on advanced Tailwind CSS techniques for building modern, responsive web interfaces.",
     takeaways: [
-      "Understanding key AI concepts, including supervised and unsupervised learning.",
-      "Working with Python libraries like NumPy, Pandas, and Scikit-learn.",
-      "Developing and evaluating machine learning models.",
-      "Exploring real-world AI applications and use cases.",
-      "Building a strong AI portfolio for job applications."
+      "Mastering advanced Tailwind CSS utilities and configuration.",
+      "Building scalable and maintainable design systems.",
+      "Implementing custom themes and responsive layouts.",
+      "Optimizing performance and accessibility with Tailwind.",
+      "Completing real-world projects using Tailwind CSS."
     ]
   },
-  // ── Web Development ───────────────────────────────────────────────────────────
   {
     img: django,
     alt: "Django",
@@ -233,6 +255,97 @@ export const certificates = [
   },
   // ── AI Development ────────────────────────────────────────────────────────────
   {
+    img: nlpAttentionModels,
+    alt: "Natural Language Processing with Attention Models",
+    main: "Natural Language Processing with Attention Models",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course focusing on state-of-the-art natural language processing architectures, covering attention mechanisms, Transformers, and their application to machine translation, summarization, and question answering.",
+    takeaways: [
+      "Understanding the core concepts of attention mechanisms in neural networks.",
+      "Building and training Transformer architectures for complex natural language tasks.",
+      "Applying pre-trained models like BERT and T5 to solve real-world NLP challenges.",
+      "Developing sequence-to-sequence models for text summarization and language translation."
+    ]
+  },
+    {
+    img: nlpSequenceModels,
+    alt: "Natural Language Processing with Sequence Models",
+    main: "Natural Language Processing with Sequence Models",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course exploring advanced natural language processing techniques using sequence models, covering topics like recurrent neural networks (RNNs), LSTMs, and GRUs for tasks such as translation and text generation.",
+    takeaways: [
+      "Understanding and implementing Recurrent Neural Networks (RNNs) for sequential data.",
+      "Building Gated Recurrent Units (GRUs) and Long Short-Term Memory (LSTM) networks.",
+      "Applying sequence models to tasks like named entity recognition and language modeling.",
+      "Developing sequence-to-sequence models for applications such as machine translation."
+    ]
+  },
+    {
+    img: multiAgentSystemsCrewAI,
+    alt: "CrewAI",
+    main: "Multi-Agent Systems using CrewAI",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course focused on building and deploying multi-agent AI systems, teaching how to utilize the CrewAI framework to orchestrate collaborative AI agents for complex problem-solving.",
+    takeaways: [
+      "Understanding the core principles and architecture of multi-agent systems.",
+      "Designing and developing specialized AI agents using CrewAI.",
+      "Orchestrating task delegation and collaboration among multiple agents.",
+      "Deploying scalable multi-agent solutions for real-world applications."
+    ]
+  },
+  {
+    img: nlpProbabilisticModels,
+    alt: "Natural Language Processing with Probabilistic Models",
+    main: "Natural Language Processing with Probabilistic Models",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course focused on probabilistic approaches to natural language processing, covering auto-correction, part-of-speech tagging, and word embeddings using statistical models.",
+    takeaways: [
+      "Implementing auto-correct algorithms using dynamic programming.",
+      "Building part-of-speech taggers with Hidden Markov Models (HMMs).",
+      "Applying the Viterbi algorithm for decoding sequential data.",
+      "Creating word embeddings using the Continuous Bag of Words (CBOW) model."
+    ]
+  },
+  {
+    img: nlpClassificationVectorSpaces,
+    alt: "Natural Language Processing with Classification and Vector Spaces",
+    main: "Natural Language Processing with Classification and Vector Spaces",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A course covering foundational natural language processing techniques, focusing on text representation, sentiment analysis, and word translation using classification algorithms and vector spaces.",
+    takeaways: [
+      "Implementing sentiment analysis models using logistic regression and Naive Bayes.",
+      "Representing words and text as vectors in mathematical spaces.",
+      "Using vector space models to discover semantic relationships between words.",
+      "Applying locality sensitive hashing (LSH) for fast and efficient word translation."
+    ]
+  },
+  {
+    img: rag,
+    alt: "Retrieval Augmented Generation (RAG)",
+    main: "Retrieval Augmented Generation (RAG)",
+    sub: "From: DeepLearning.AI | Coursera",
+    description: "A specialized course on Retrieval Augmented Generation (RAG), teaching how to enhance large language models with external knowledge retrieval for more accurate and context-aware responses.",
+    takeaways: [
+      "Understanding the core concepts and architecture of RAG systems.",
+      "Implementing document processing, chunking, and embedding techniques.",
+      "Building and querying vector databases for efficient information retrieval.",
+      "Integrating retrieved context with LLMs to generate grounded and accurate outputs."
+    ]
+  },
+  {
+    img: supervisedMachineLearning,
+    alt: "Supervised Learning: Regression and Classification",
+    main: "Supervised Learning: Regression and Classification",
+    sub: "From: DeepLearning.AI, Stanford Online | Coursera",
+    description: "A foundational machine learning course focusing on supervised learning algorithms, including linear and logistic regression, and how to implement them for predictive modeling.",
+    takeaways: [
+      "Understanding the foundational concepts of supervised machine learning.",
+      "Building and training predictive models using linear regression.",
+      "Solving classification problems using logistic regression.",
+      "Applying gradient descent to optimize machine learning models."
+    ]
+  },
+  {
     img: dotpy,
     alt: "Dotpy",
     main: "AI Diploma",
@@ -303,6 +416,20 @@ export const certificates = [
     ]
   },
   // ── Others ────────────────────────────────────────────────────────────────────
+  {
+    img: aice,
+    alt: "AICE",
+    main: "AI Career Essential",
+    sub: "From: Alx",
+    description: "A practical AI career-oriented course covering essential skills in artificial intelligence and data science.",
+    takeaways: [
+      "Understanding key AI concepts, including supervised and unsupervised learning.",
+      "Working with Python libraries like NumPy, Pandas, and Scikit-learn.",
+      "Developing and evaluating machine learning models.",
+      "Exploring real-world AI applications and use cases.",
+      "Building a strong AI portfolio for job applications."
+    ]
+  },
   {
     img: ecpc,
     alt: "ECPC",
@@ -386,7 +513,7 @@ const webDevAlts = [
   'Intro to Backend', 'Version Control', 'Intro to DataBase', 'Programming in Python', 'HTML-CSS',
 ];
 
-const aiDevAlts = ['python', 'Pandas', 'data-cleaning', 'intro-to-machine', 'Dotpy'];
+const aiDevAlts = ['python', 'Pandas', 'data-cleaning', 'intro-to-machine', 'Dotpy', 'Supervised Learning: Regression and Classification'];
 
 const allCategorized = [...importantAlts, ...webDevAlts, ...aiDevAlts];
 
