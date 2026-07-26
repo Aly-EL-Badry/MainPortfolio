@@ -20,14 +20,6 @@
   pointer-events: none;
 }
 
-.title-section {
-  text-align: center;
-  margin-bottom: 80px;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
 .title {
   font-size: 3.5rem;
   font-weight: 800;
@@ -43,39 +35,12 @@
 }
 
 @keyframes gradient {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
 
-.title-underline {
-  width: 150px;
-  height: 4px;
-  background: linear-gradient(90deg, #3498db, #2980b9);
-  margin: 0 auto;
-  border-radius: 2px;
-  box-shadow: 0 0 20px rgba(52, 152, 219, 0.5);
-  position: relative;
-  overflow: hidden;
-}
-
-.title-underline::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.8), transparent);
-  animation: shine 2s infinite;
-}
-
-@keyframes shine {
-  100% { left: 100%; }
-}
-
-
-/* Important Badge */
+/* ── Important Badge ─────────────────────────────────────────────────────── */
 .important-badge {
   position: absolute;
   top: 15px;
@@ -95,43 +60,18 @@
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.1); }
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.1); }
   100% { transform: scale(1); }
 }
 
-/* Important Cards Styling */
+/* ── Important Card ──────────────────────────────────────────────────────── */
 .important-card {
   border: 2px solid rgba(52, 152, 219, 0.3);
   box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
   position: relative;
   overflow: hidden;
   animation: glowBorder 3s ease-in-out infinite alternate;
-}
-
-.important-card::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, rgba(52, 152, 219, 0.05) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(52, 152, 219, 0.05) 0%, transparent 50%);
-  pointer-events: none;
-  z-index: 0;
-}
-
-@keyframes glowBorder {
-  0% {
-    border-color: rgba(52, 152, 219, 0.3);
-    box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2);
-  }
-  100% {
-    border-color: rgba(52, 152, 219, 0.8);
-    box-shadow: 0 8px 32px rgba(52, 152, 219, 0.4), 0 0 20px rgba(52, 152, 219, 0.3);
-  }
 }
 
 .important-card::before {
@@ -166,7 +106,12 @@
   text-shadow: 0 0 20px rgba(41, 128, 185, 0.5);
 }
 
-/* See More Details Effect */
+@keyframes glowBorder {
+  0%   { border-color: rgba(52, 152, 219, 0.3); box-shadow: 0 8px 32px rgba(52, 152, 219, 0.2); }
+  100% { border-color: rgba(52, 152, 219, 0.8); box-shadow: 0 8px 32px rgba(52, 152, 219, 0.4), 0 0 20px rgba(52, 152, 219, 0.3); }
+}
+
+/* ── See More strip ──────────────────────────────────────────────────────── */
 .see-more-section {
   background: rgba(0, 0, 0, 0.8);
   border-top: 1px solid rgba(52, 152, 219, 0.2);
@@ -210,14 +155,9 @@
   transform: translateX(5px);
 }
 
-/* Remove the old overlay styles */
-.see-more-overlay {
-  display: none;
-}
-
-/* Enhanced hover effects for all cards */
+/* ── Card hover ──────────────────────────────────────────────────────────── */
 .certificate-card:hover {
-  transform: translateY(-10px) rotateX(5deg);
+  transform: translateY(-8px);
   box-shadow: 0 15px 45px rgba(52, 152, 219, 0.3);
   border-color: rgba(52, 152, 219, 0.5);
 }
@@ -241,6 +181,7 @@
   transform: translateY(-3px);
 }
 
+/* ── Grid & Card base ────────────────────────────────────────────────────── */
 .certificates-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
@@ -248,7 +189,6 @@
   width: 100%;
   max-width: 1800px;
   padding: 20px;
-  perspective: 1000px;
 }
 
 .certificate-card {
@@ -263,7 +203,6 @@
   transition: all 0.3s ease;
   height: 100%;
   min-height: 350px;
-  transform-style: preserve-3d;
 }
 
 .card-content {
@@ -278,7 +217,6 @@
   width: 100%;
   padding-top: 60%;
   overflow: hidden;
-  transform: translateZ(20px);
 }
 
 .image-wrapper img {
@@ -297,10 +235,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, 
-    rgba(0, 0, 0, 0) 0%,
-    rgba(0, 0, 0, 0.8) 100%
-  );
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.8) 100%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -313,7 +248,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  transform: translateZ(10px);
 }
 
 .cert-title {
@@ -332,200 +266,97 @@
   transition: all 0.3s ease;
 }
 
-/* Responsive Design */
-@media (max-width: 1600px) {
-  .certificates-container {
-    padding: 80px 80px;
-  }
-  
-  .certificates-grid {
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-    gap: 35px;
-  }
+/* ── Show More / Show Less ───────────────────────────────────────────────── */
+.show-more-container {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 8px 0 40px;
+  width: 100%;
+}
 
-  .section-heading {
-    font-size: 2.2rem;
-  }
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border: 1px solid rgba(52, 152, 219, 0.4);
+  border-radius: 8px;
+  background: rgba(52, 152, 219, 0.08);
+  color: #3498db;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(6px);
+}
+
+.show-more-btn:hover {
+  background: rgba(52, 152, 219, 0.2);
+  border-color: rgba(52, 152, 219, 0.8);
+  box-shadow: 0 0 18px rgba(52, 152, 219, 0.25);
+  color: #fff;
+}
+
+.show-more-icon {
+  font-size: 1.1rem;
+  transition: transform 0.3s ease;
+}
+
+.show-more-btn:hover .show-more-icon {
+  transform: translateY(3px);
+}
+
+.show-less-btn:hover .show-more-icon {
+  transform: translateY(-3px);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────────── */
+@media (max-width: 1600px) {
+  .certificates-container { padding: 80px 80px; }
+  .certificates-grid { grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 35px; }
 }
 
 @media (max-width: 1400px) {
-  .certificates-container {
-    padding: 80px 60px;
-  }
-  
-  .certificates-grid {
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 30px;
-  }
-
-  .title {
-    font-size: 3.2rem;
-  }
-
-  .section-heading {
-    font-size: 2rem;
-  }
-
-  .important-badge {
-    width: 35px;
-    height: 35px;
-    font-size: 1rem;
-  }
+  .certificates-container { padding: 80px 60px; }
+  .certificates-grid { grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+  .title { font-size: 3.2rem; }
+  .important-badge { width: 35px; height: 35px; font-size: 1rem; }
 }
 
 @media (max-width: 1024px) {
-  .certificates-container {
-    padding: 60px 40px;
-  }
-
-  .certificates-grid {
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 25px;
-  }
-
-  .title {
-    font-size: 2.8rem;
-  }
-
-  .section-heading {
-    font-size: 1.8rem;
-  }
-
-  .cert-title {
-    font-size: 1.6rem;
-  }
-
-  .important-badge {
-    width: 32px;
-    height: 32px;
-    font-size: 0.9rem;
-    top: 12px;
-    right: 12px;
-  }
-
-  .see-more-text {
-    font-size: 1rem;
-  }
+  .certificates-container { padding: 60px 40px; }
+  .certificates-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; }
+  .title { font-size: 2.8rem; }
+  .cert-title { font-size: 1.6rem; }
+  .important-badge { width: 32px; height: 32px; font-size: 0.9rem; top: 12px; right: 12px; }
+  .see-more-text { font-size: 1rem; }
 }
 
 @media (max-width: 768px) {
-  .certificates-container {
-    padding: 60px 30px;
-  }
-
-  .title {
-    font-size: 2.5rem;
-  }
-
-  .section-heading {
-    font-size: 1.6rem;
-  }
-
-  .certificates-grid {
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-  }
-
-  .cert-title {
-    font-size: 1.4rem;
-  }
-
-  .cert-subtitle {
-    font-size: 1rem;
-  }
-
-  .important-badge {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8rem;
-    top: 10px;
-    right: 10px;
-  }
-
-  .see-more-text {
-    font-size: 0.9rem;
-    letter-spacing: 0.5px;
-  }
-
-  .see-more-section {
-    padding: 8px 10px;
-  }
-
-  .see-more-arrow {
-    font-size: 0.8rem;
-  }
+  .certificates-container { padding: 60px 30px; }
+  .title { font-size: 2.5rem; }
+  .certificates-grid { grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; }
+  .cert-title { font-size: 1.4rem; }
+  .cert-subtitle { font-size: 1rem; }
+  .important-badge { width: 30px; height: 30px; font-size: 0.8rem; top: 10px; right: 10px; }
+  .see-more-text { font-size: 0.9rem; letter-spacing: 0.5px; }
+  .see-more-section { padding: 8px 10px; }
+  .see-more-arrow { font-size: 0.8rem; }
 }
 
 @media (max-width: 480px) {
-  .certificates-container {
-    padding: 40px 20px;
-  }
-
-  .title {
-    font-size: 2rem;
-  }
-
-  .section-heading {
-    font-size: 1.4rem;
-  }
-
-  .certificates-grid {
-    grid-template-columns: 1fr;
-    gap: 15px;
-  }
-
-  .text-content {
-    padding: 12px;
-  }
-
-  .cert-title {
-    font-size: 1.2rem;
-  }
-
-  .cert-subtitle {
-    font-size: 0.85rem;
-  }
-
-  .important-badge {
-    width: 28px;
-    height: 28px;
-    font-size: 0.7rem;
-    top: 8px;
-    right: 8px;
-  }
-
-  .see-more-text {
-    font-size: 0.8rem;
-    letter-spacing: 0.3px;
-  }
-
-  .see-more-section {
-    padding: 6px 8px;
-  }
-
-  .see-more-arrow {
-    font-size: 0.7rem;
-  }
+  .certificates-container { padding: 40px 20px; }
+  .title { font-size: 2rem; }
+  .certificates-grid { grid-template-columns: 1fr; gap: 15px; }
+  .text-content { padding: 12px; }
+  .cert-title { font-size: 1.2rem; }
+  .cert-subtitle { font-size: 0.85rem; }
+  .important-badge { width: 28px; height: 28px; font-size: 0.7rem; top: 8px; right: 8px; }
+  .see-more-text { font-size: 0.8rem; letter-spacing: 0.3px; }
+  .see-more-section { padding: 6px 8px; }
+  .see-more-arrow { font-size: 0.7rem; }
 }
 
-/* Add smooth scrolling to the page */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Add loading animation for images */
-.image-wrapper::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-  animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
-} 
+html { scroll-behavior: smooth; }
