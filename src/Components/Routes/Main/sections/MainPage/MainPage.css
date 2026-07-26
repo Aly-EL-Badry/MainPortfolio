@@ -1,0 +1,297 @@
+.mainPage {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.5);
+}
+
+.content {
+  z-index: 2;
+  max-width: 800px;
+  text-align: center;
+}
+
+.text {
+  padding: 2rem;
+}
+
+.welcome {
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  margin-top: 80px;
+  font-weight: 900;
+  color: #3498db;
+  animation: fadeIn 0.7s ease-in-out;
+  font-family: "Courier New", Courier, monospace;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+}
+
+.Name {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 0.7s forwards;
+  margin: 1rem 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.role-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1s forwards;
+}
+
+.role {
+  color: #3498db;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: "Courier New", Courier, monospace;
+  transition: all 0.3s ease;
+}
+
+.role:hover {
+  transform: translateY(-3px);
+  text-shadow: 0 0 15px #3498db;
+}
+
+.role-separator {
+  color: #3498db;
+  font-weight: 300;
+  animation: blink 2s infinite;
+}
+
+.desc {
+  font-size: 1.2rem;
+  color: #d9d9d9;
+  margin-top: 20px;
+  font-family: "Courier New", Courier, monospace;
+  opacity: 0;
+  margin-bottom: 30px;
+  animation: fadeIn 1s ease-in-out 1.2s forwards;
+  line-height: 1.6;
+}
+
+.highlight {
+  color: #3498db;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+.highlight::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-color: #3498db;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 12px 30px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: rgb(51, 51, 51, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  border-radius: 5px;
+  border: 1px solid #3498db;
+  filter: drop-shadow(0 0 0.75rem #476e89);
+  opacity: 0;
+  animation: fadeIn 1s ease-in-out 1.5s forwards;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn:hover {
+  background: #3498db;
+  color: black;
+  transform: translateY(-3px);
+}
+
+.btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover .btn-icon {
+  transform: translateX(5px);
+}
+
+.arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  z-index: 100;
+}
+
+.arr {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.aa {
+  font-size: 2rem;
+  margin-right: 12px;
+  color: white;
+  animation: bounce 1.5s infinite;
+  transition: all 0.3s;
+  animation: fadeInUp 1s ease-out, bounce 1.5s infinite 1s;
+}
+
+.arr:hover .aa {
+  color: #3498db;
+  text-shadow: 0px 0px 40px #3498db;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@media (max-width: 768px) {
+  .video-bg {
+    display: none;
+  }
+  .aa {
+    font-size: 1.5rem;
+  }
+  .welcome {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+  }
+  .Name {
+    font-size: 2.5rem;
+  }
+  .role {
+    font-size: 1rem;
+  }
+  .desc {
+    font-size: 1rem;
+    margin-top: 15px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-bg {
+    display: none;
+  }
+  .welcome {
+    font-size: 1.5rem;
+  }
+  .Name {
+    font-size: 2rem;
+  }
+  .role-container {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .role-separator {
+    display: none;
+  }
+  .desc {
+    font-size: 0.9rem;
+    margin-top: 10px;
+  }
+  .btn {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+.mainPage::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(10, 25, 47, 0.7),
+    rgba(10, 25, 47, 0.3)
+  );
+  z-index: 0;
+}
