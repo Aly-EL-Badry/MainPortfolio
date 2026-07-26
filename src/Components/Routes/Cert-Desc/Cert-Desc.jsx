@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import { useParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
@@ -6,8 +6,42 @@ import Error from '../Error/Error';
 import './Cert-Desc.css';
 import { certificates } from '../../../data/certData';
 
-const certDesc = () => {
+// ── Auto-fit title to one line ───────────────────────────────────────────────
+const useFitText = (maxSize = 60, minSize = 18) => {
+  const ref = useRef(null);
+
+  const fit = useCallback(() => {
+    const el = ref.current;
+    if (!el || !el.parentElement) return;
+
+    // Get parent padding so we don't overlap it
+    const parentStyle = window.getComputedStyle(el.parentElement);
+    const padding = parseFloat(parentStyle.paddingLeft) + parseFloat(parentStyle.paddingRight);
+    const availableWidth = el.parentElement.clientWidth - padding;
+
+    // reset to max so we can measure from the top
+    el.style.fontSize = `${maxSize}px`;
+    let size = maxSize;
+
+    // shrink until it no longer overflows its parent width
+    while (el.scrollWidth > availableWidth && size > minSize) {
+      size -= 1;
+      el.style.fontSize = `${size}px`;
+    }
+  }, [maxSize, minSize]);
+
+  useEffect(() => {
+    fit();
+    window.addEventListener('resize', fit);
+    return () => window.removeEventListener('resize', fit);
+  }, [fit]);
+
+  return ref;
+};
+
+const CertDesc = () => {
   const { certId } = useParams();
+  const titleRef = useFitText(60, 18);
   
   const cert = certificates.find(({ alt }) => alt === certId);
   
@@ -28,7 +62,7 @@ const certDesc = () => {
           <div className="cert-details">
             
           <div className="text">
-            <h1>{cert.main}</h1>
+            <h1 ref={titleRef}>{cert.main}</h1>
             <p className="sup-title">{cert.sub}</p>
             <p className="d">{cert.description}</p>
             <hr className="lin" />
@@ -64,4 +98,4 @@ const certDesc = () => {
   );
 };
 
-export default certDesc;
+export default CertDesc;
