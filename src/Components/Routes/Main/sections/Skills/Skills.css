@@ -1,193 +1,323 @@
-.timeline {
+/* ========================================
+   SKILLS SECTION — Premium Card Design
+   ======================================== */
+
+.skills-section {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 30px 80px;
+}
+
+/* ---- Rows Container ---- */
+.skills-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+
+/* ---- Row ---- */
+.skills-row {
+  display: grid;
+  gap: 16px;
+}
+
+.skills-row--1 { grid-template-columns: 1fr; }
+.skills-row--2 { grid-template-columns: 1fr 1fr; }
+.skills-row--3 { grid-template-columns: 1fr 1fr 1fr; }
+
+/* ---- Field Card ---- */
+.field-card {
   position: relative;
-  max-width: 1200px;
-  margin: 30px auto;
-  overflow-x: clip;
-  padding: 20px 0;
-}
-
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: #3498db;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-  box-shadow: 0 0 10px #3498db;
-}
-
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-  transition: all 0.3s ease;
-}
-
-.container.left::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: #3498db;
-  border: 4px solid black;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-  filter: drop-shadow(0 0 0.75rem #3498db);
-  transition: all 0.3s ease;
-}
-
-.container.left:hover::after {
-  transform: scale(1.2);
-  box-shadow: 0 0 15px #3498db;
-}
-
-.container.left h3 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: #3498db;
-  margin: 0;
-  font-family: "Courier New", Courier, monospace;
-  text-shadow: 0 0 5px #3498db;
-  transition: all 0.3s ease;
-}
-
-.container.left:hover h3 {
-  transform: translateX(5px);
-  text-shadow: 0 0 10px #3498db;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  left: 50%;
-}
-
-.right::after {
-  left: -16px;
-}
-
-/* The actual content - NEW UNIFIED DESIGN */
-.details {
-  padding: 25px;
-  background: rgba(13, 13, 13, 0.8);
-  position: relative;
-  border-radius: 15px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
-  border: 1px solid rgba(52, 152, 219, 0.3);
-  backdrop-filter: blur(10px);
-  font-family: 'Roboto', sans-serif;
-  transition: all 0.3s ease;
+  background: rgba(14, 14, 16, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
   overflow: hidden;
+  transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.details::before {
+/* ── Dot grid pattern overlay ── */
+.field-card::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0) 100%);
+  inset: 0;
+  background-image: radial-gradient(
+    rgba(52, 152, 219, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 20px 20px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
   z-index: 0;
 }
 
-.details:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 40px rgba(52, 152, 219, 0.2);
-  border: 1px solid rgba(52, 152, 219, 0.5);
+.field-card:hover::before {
+  opacity: 1;
 }
 
-.details ul {
-  list-style: none;
-  padding: 0;
+/* ── Gradient glow ── */
+.field-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    from 180deg at 50% 50%,
+    transparent 0deg,
+    rgba(52, 152, 219, 0.04) 60deg,
+    transparent 120deg,
+    rgba(52, 152, 219, 0.06) 180deg,
+    transparent 240deg,
+    rgba(52, 152, 219, 0.03) 300deg,
+    transparent 360deg
+  );
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 0;
+  animation: rotateGlow 8s linear infinite;
+}
+
+.field-card:hover::after {
+  opacity: 1;
+}
+
+@keyframes rotateGlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.field-card:hover {
+  border-color: rgba(52, 152, 219, 0.2);
+  transform: translateY(-4px);
+  box-shadow:
+    0 12px 40px rgba(0, 0, 0, 0.4),
+    0 0 60px rgba(52, 152, 219, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ── Left accent — animated gradient ── */
+.field-card__accent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 100%;
+  z-index: 2;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    #3498db 30%,
+    #3498db 70%,
+    transparent 100%
+  );
+  background-size: 100% 200%;
+  animation: accentPulse 3s ease-in-out infinite;
+  transition: width 0.3s ease, box-shadow 0.3s ease;
+}
+
+.field-card:hover .field-card__accent {
+  width: 3px;
+  box-shadow: 0 0 12px rgba(52, 152, 219, 0.5), 0 0 4px rgba(52, 152, 219, 0.3);
+}
+
+@keyframes accentPulse {
+  0%, 100% { background-position: 0% 0%; }
+  50% { background-position: 0% 100%; }
+}
+
+/* ---- Header ---- */
+.field-card__header {
   position: relative;
   z-index: 1;
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 12px;
-}
-
-.details li {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  color: #e0e0e0;
-  font-size: 1.05rem;
-  line-height: 1.5;
-  transition: all 0.3s ease;
-  padding: 10px 15px;
-  border-radius: 8px;
-  background: rgba(20, 20, 20, 0.5);
-  border-left: 3px solid #3498db;
   display: flex;
   align-items: center;
+  gap: 14px;
+  padding: 22px 24px 0;
 }
 
-.skill-icon {
+.field-card__icon {
+  flex-shrink: 0;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.1) 0%, rgba(52, 152, 219, 0.03) 100%);
+  border: 1px solid rgba(52, 152, 219, 0.12);
   color: #3498db;
-  font-size: 1.2rem;
-  margin-right: 15px;
-  min-width: 24px;
-  text-align: center;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }
 
-.details li:hover {
-  background: rgba(30, 30, 30, 0.7);
+.field-card:hover .field-card__icon {
+  background: linear-gradient(135deg, rgba(52, 152, 219, 0.18) 0%, rgba(52, 152, 219, 0.06) 100%);
+  border-color: rgba(52, 152, 219, 0.35);
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.15);
+  transform: scale(1.08) rotate(-3deg);
+}
+
+.field-card__icon svg {
+  width: 20px;
+  height: 20px;
+}
+
+.field-card__info {
+  flex: 1;
+  min-width: 0;
+}
+
+.field-card__title {
+  font-size: 1.08rem;
+  font-weight: 700;
   color: #ffffff;
-  transform: translateX(5px);
+  margin: 0;
+  font-family: 'Montserrat', 'Roboto', sans-serif;
+  letter-spacing: 0.2px;
+  transition: all 0.4s ease;
 }
 
-.details li:hover .skill-icon {
-  transform: scale(1.2);
-  color: #5dade2;
-  text-shadow: 0 0 8px rgba(52, 152, 219, 0.6);
+.field-card:hover .field-card__title {
+  background: linear-gradient(90deg, #3498db, #6cb4ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-shadow: none;
 }
 
+.field-card__subtitle {
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.22);
+  margin: 4px 0 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  transition: color 0.4s ease;
+}
+
+.field-card:hover .field-card__subtitle {
+  color: rgba(52, 152, 219, 0.5);
+}
+
+/* ---- Pills ---- */
+.field-card__pills {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  padding: 16px 24px 22px;
+}
+
+/* ── Skill Pill — frosted glass look ── */
+.skill-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 13px;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.025);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  cursor: default;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  letter-spacing: 0.15px;
+}
+
+.skill-pill:hover {
+  color: #ffffff;
+  background: rgba(52, 152, 219, 0.12);
+  border-color: rgba(52, 152, 219, 0.4);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow:
+    0 6px 20px rgba(52, 152, 219, 0.15),
+    0 0 0 1px rgba(52, 152, 219, 0.1);
+}
+
+/* ========================================
+   RESPONSIVE — Tablet
+   ======================================== */
+@media screen and (max-width: 900px) {
+  .skills-section {
+    padding: 30px 20px 60px;
+  }
+
+  .skills-row--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skills-row--3 .field-card:last-child {
+    grid-column: 1 / -1;
+  }
+}
+
+/* ========================================
+   RESPONSIVE — Mobile
+   ======================================== */
 @media screen and (max-width: 620px) {
-  .bar{
-    width: 100%;
-  }
-  .details {
-    padding: 20px;
-  }
-  
-  .details li {
-    font-size: 0.95rem;
-    padding: 8px 12px;
-  }
-  
-  .timeline::after {
-    left: 31px;
+  .skills-section {
+    padding: 24px 14px 50px;
   }
 
-  .container {
-    width: 100%;
-    padding-left: 70px;
-    padding-right: 25px;
+  .skills-rows {
+    gap: 12px;
+    margin-top: 24px;
   }
 
-  .container::before {
-    left: 60px;
-    border: medium solid white;
-    border-width: 10px 10px 10px 0;
-    border-color: transparent white transparent transparent;
+  .skills-row--1,
+  .skills-row--2,
+  .skills-row--3 {
+    grid-template-columns: 1fr;
   }
 
-  .left::after, .right::after {
-    left: 15px;
+  .field-card {
+    border-radius: 14px;
   }
-  
-  .right {
-    left: 0%;
+
+  .field-card__header {
+    padding: 18px 18px 0;
+    gap: 12px;
+  }
+
+  .field-card__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .field-card__icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .field-card__title {
+    font-size: 1rem;
+  }
+
+  .field-card__subtitle {
+    font-size: 0.65rem;
+    letter-spacing: 0.8px;
+  }
+
+  .field-card__pills {
+    padding: 12px 18px 18px;
+    gap: 6px;
+  }
+
+  .skill-pill {
+    padding: 5px 11px;
+    font-size: 0.74rem;
+    border-radius: 7px;
+  }
+
+  .field-card:hover {
+    transform: translateY(-2px);
   }
 }
-
