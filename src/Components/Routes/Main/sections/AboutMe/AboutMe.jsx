@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from "framer-motion";
-import { FaBrain, FaCode, FaDatabase, FaRocket, FaTrophy, FaUsers, FaGraduationCap } from "react-icons/fa";
+import { FaBrain, FaCode, FaDatabase, FaRocket, FaTrophy, FaUsers, FaGraduationCap, FaStar, FaRobot } from "react-icons/fa";
 import './AboutMe.css';
 
 const Profile = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1748174620/professional_zpcarn.jpg";
@@ -53,10 +53,28 @@ const AboutMe = () => {
               </div>
               <div className="highlight-item">
                 <div className="highlight-icon">
+                  <FaStar />
+                </div>
+                <div className="highlight-content">
+                  <h3>LILT AI Excellence</h3>
+                  <p>Received exceptional reviews for engineering complex Arabic programming tasks and testing the cultural reasoning of Claude Opus 4.6.</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <div className="highlight-icon">
+                  <FaRobot />
+                </div>
+                <div className="highlight-content">
+                  <h3>Cortex AI Solutions</h3>
+                  <p>Developed and deployed an intelligent customer service chatbot for Cortex, automating support workflows and enhancing user engagement.</p>
+                </div>
+              </div>
+              <div className="highlight-item">
+                <div className="highlight-icon">
                   <FaUsers />
                 </div>
                 <div className="highlight-content">
-                  <h3>Star Union — Vice Head AI Community</h3>
+                  <h3>Star Union — Vice Head AI</h3>
                   <p>Leading the project track in Star Union’s AI community; steering technical direction and team delivery.</p>
                 </div>
               </div>
@@ -66,57 +84,24 @@ const AboutMe = () => {
                 </div>
                 <div className="highlight-content">
                   <h3>AI Student — 3rd Year</h3>
-                  <p>AI department, 3rd year. GPA 3.22; ranked 40th in my department.</p>
+                  <p>AI department, 3rd year. Consistently maintaining a strong academic record with a 3.29 GPA and ranked 29th in my department.</p>
                 </div>
               </div>
             </div>
-            <div className="skills-showcase">
-              <div className="skills-col">
-                <div className="skills-col-header">
-                  <FaCode className="skills-col-icon" />
-                  <h4>Full-Stack Developer</h4>
-                </div>
-                <div className="skills-pills">
-                  <span className="skill-pill">React</span>
-                  <span className="skill-pill">Next.js</span>
-                  <span className="skill-pill">Django</span>
-                  <span className="skill-pill">FastAPI</span>
-                  <span className="skill-pill">Flask</span>
-                  <span className="skill-pill">Tailwind</span>
-                  <span className="skill-pill">Git</span>
-                  <span className="skill-pill">GitHub</span>
-                </div>
-              </div>
-              <div className="skills-col">
-                <div className="skills-col-header">
-                  <FaDatabase className="skills-col-icon" />
-                  <h4>Data Science</h4>
-                </div>
-                <div className="skills-pills">
-                  <span className="skill-pill">Machine Learning</span>
-                  <span className="skill-pill">Deep Learning</span>
-                  <span className="skill-pill">AI Engineering</span>
-                  <span className="skill-pill">Python</span>
-                  <span className="skill-pill">Data Analysis</span>
-                  <span className="skill-pill">Statistics</span>
-                </div>
-              </div>
+            <div className="skills-showcase" style={{ display: 'block', marginTop: '0' }}>
               <div className="skills-col skills-col-ai-full">
                 <div className="skills-col-header">
                   <FaBrain className="skills-col-icon" />
-                  <h4>AI Engineer</h4>
+                  <h4>Core Expertise</h4>
                 </div>
                 <div className="skills-pills">
-                  <span className="skill-pill">NLP</span>
-                  <span className="skill-pill">LLMs</span>
-                  <span className="skill-pill">YOLO</span>
-                  <span className="skill-pill">MLOps</span>
-                  <span className="skill-pill">PyTorch</span>
-                  <span className="skill-pill">TensorFlow</span>
-                  <span className="skill-pill">Computer Vision</span>
-                  <span className="skill-pill">Prompt Engineering</span>
-                  <span className="skill-pill">LLM Fine-tuning</span>
-                  <span className="skill-pill">Cloud Deployment</span>
+                  <span className="skill-pill">AI Engineering</span>
+                  <span className="skill-pill">LLMs & Prompt Engineering</span>
+                  <span className="skill-pill">Computer Vision (YOLO)</span>
+                  <span className="skill-pill">Python (PyTorch, TensorFlow)</span>
+                  <span className="skill-pill">Full-Stack (Next.js, FastAPI, Django)</span>
+                  <span className="skill-pill">Data Science</span>
+                  <span className="skill-pill">Docker & Cloud Deployment</span>
                 </div>
               </div>
             </div>
@@ -136,11 +121,11 @@ const AboutMe = () => {
                   <p>AI Engineer & Full-Stack Developer</p>
                   <div className="profile-stats">
                     <div className="stat">
-                      <span className="stat-number">1+</span>
+                      <span className="stat-number">2+</span>
                       <span className="stat-label">Years Experience</span>
                     </div>
                     <div className="stat">
-                      <span className="stat-number">20+</span>
+                      <span className="stat-number">30+</span>
                       <span className="stat-label">Projects</span>
                     </div>
                   </div>

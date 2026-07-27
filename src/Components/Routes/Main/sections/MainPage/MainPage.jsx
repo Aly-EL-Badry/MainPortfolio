@@ -23,7 +23,7 @@ const MainPage = () => {
             <span className="role-separator">|</span>
             <span className="role">Full-Stack Developer</span>
             <span className="role-separator">|</span>
-            <span className="role">Entrepreneur</span>
+            <span className="role">Data Scientist</span>
           </div>
           <p className="desc">
             Transforming ideas into intelligent solutions through the power of
