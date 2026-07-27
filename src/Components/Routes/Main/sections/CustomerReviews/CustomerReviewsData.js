@@ -9,4 +9,20 @@ export const reviews = [
     rating: 5,
     reviewLink: "https://www.linkedin.com/services/page/4a8a133385020a4930/"
   }, 
+  {
+    name: "Vhartian",
+    company: "LILT AI",
+    service: "Ai Engineer",
+    review: "Very very good task and this character trap for the article compared to normal words was very smart. I am not native I didn't know this and took me a while to figure this out.",
+    avatar: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785141555/Lilt_qs6p5q.webp",
+    rating: 5,
+  },
+  {
+    name: "Vhartian",
+    company: "LILT AI",
+    service: "Ai Engineer",
+    review: "This is really nice task, I am really surprised that model fails on such cases but I tried to poke holes in the task it seems legit.",
+    avatar: "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785141555/Lilt_qs6p5q.webp",
+    rating: 5,
+  }
 ];

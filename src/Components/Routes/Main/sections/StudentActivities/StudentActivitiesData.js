@@ -1,21 +1,51 @@
 const star = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/star_henlap.webp";
 const event = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159833/event_hd39ee.webp";
 
-export const activities = [
+export const groupedActivities = [
   {
-    id: 1,
-    image: star,
-    title: "Star Union",
-    memberTitle: "AI Member",
-    description: "Contributed to AI-Workshop, developed machine learning models, and collaborated on real-world applications. and mentoring within the student activity",
+    company: "Star Union",
+    logo: star,
+    logoAlt: "Star Union Logo",
+    roles: [
+      {
+        id: 1,
+        title: "AI Vice Head",
+        duration: "Oct 2025 - Jun 2026 · 9 mos",
+        responsibilities: [
+          "Designed and executed the full seasonal plan for the AI committee, including education, projects, and internal milestones.",
+          "Led the recruitment cycle, generating 100+ applications and conducting 30+ technical interviews to select qualified AI members.",
+          "Coordinated and mentored teams preparing for the Star Union Internal Hackathon, guiding them to build real AI-driven products.",
+          "Delivered advanced AI training on MLOps, NLP, Computer Vision, and LLMs, raising the technical level of the committee.",
+          "Oversaw project workflows and supported team leads to ensure consistent progress and high-quality output."
+        ]
+      },
+      {
+        id: 2,
+        title: "AI Member",
+        duration: "Oct 2024 - Oct 2025 · 1 year",
+        responsibilities: [
+          "Contributed to AI-Workshop, developed machine learning models, and collaborated on real-world applications.",
+          "Mentored junior members within the student activity."
+        ]
+      }
+    ]
   },
   {
-    id: 2,
-    image: event,
-    title: "Graduation Party",
-    memberTitle: "Event Organizer",
-    description: "Coordinated and managed the graduation party, overseeing planning, logistics, and execution to ensure a seamless and memorable event.",
-  },
+    company: "Graduation Party",
+    logo: event,
+    logoAlt: "Graduation Party Logo",
+    roles: [
+      {
+        id: 3,
+        title: "Event Organizer",
+        duration: "Jun 2025",
+        responsibilities: [
+          "Coordinated and managed the graduation party.",
+          "Oversaw planning, logistics, and execution to ensure a seamless and memorable event."
+        ]
+      }
+    ]
+  }
 ];
 
 export const galleryImages = [

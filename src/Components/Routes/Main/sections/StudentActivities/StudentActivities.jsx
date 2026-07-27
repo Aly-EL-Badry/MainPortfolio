@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { FaTimes } from "react-icons/fa";
-import { activities, galleryImages } from './StudentActivitiesData';
+import { groupedActivities, galleryImages } from './StudentActivitiesData';
 import './StudentActivities.css';
 
 const StudentActivities = () => {
@@ -11,21 +11,65 @@ const StudentActivities = () => {
     <>
       <div className="title">Student Activities</div>
       <hr />
-      <div className="activity">
-        {activities.map((activity) => (
-          <motion.div initial={{ y: 100, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}  
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }} 
-          className="bar" key={activity.id}>
-            <img src={activity.image} alt={activity.title} className="activity-img" />
-            <div className="activity-head">{activity.title}</div>
-            <div className="member-title">{activity.memberTitle}</div>
-            <div className="activity-content">{activity.description}</div>
+      
+      {/* Experience-Style Grouped Timeline */}
+      <div className="experience-container">
+        {groupedActivities.map((group, groupIndex) => (
+          <motion.div 
+            key={groupIndex}
+            initial={{ y: 100, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}  
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.6, ease: "easeOut" }} 
+            className="experience-card"
+          >
+            <div className="experience-content">
+              
+              <div className="experience-main">
+                <div className="experience-header">
+                  <div className="company-info">
+                    <h2>{group.company}</h2>
+                  </div>
+                </div>
+                
+                {/* Timeline for roles under this company */}
+                <div className="activity-roles">
+                  {group.roles.map((role) => (
+                    <div key={role.id} className="activity-role">
+                      <div className="activity-role-node"></div>
+                      
+                      <div className="job-info">
+                        <p className="job-title">{role.title}</p>
+                        <p className="duration">{role.duration}</p>
+                      </div>
+                      
+                      <div className="experience-details">
+                        {role.responsibilities && role.responsibilities.length > 0 && (
+                          <>
+                            <h3>Key Responsibilities & Achievements</h3>
+                            <ul>
+                              {role.responsibilities.map((item, index) => (
+                                <li key={index}>{item}</li>
+                              ))}
+                            </ul>
+                          </>
+                        )}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              
+              <div className="company-logo">
+                <img src={group.logo} alt={group.logoAlt} />
+              </div>
+              
+            </div>
           </motion.div>
         ))}
       </div>
 
+      {/* Workshop Video & Gallery Section */}
       <motion.div 
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}  
@@ -42,8 +86,6 @@ const StudentActivities = () => {
             className="activity-media-video"
           >
             <iframe
-              width="100%"
-              height="100%"
               src="https://www.youtube.com/embed/WrECRxbWMlg"
               title="Unsupervised Learning Workshop - Aly El-Badry"
               frameBorder="0"
@@ -52,12 +94,13 @@ const StudentActivities = () => {
               className="activity-media-iframe"
             ></iframe>
           </motion.div>
+          
           <motion.div 
             initial={{ x: 50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
-            className="activity-content"
+            style={{flex: 1, display: 'flex', flexDirection: 'column', gap: '1rem'}}
           >
             {/* Header */}
             <div className="activity-media-header">
@@ -110,6 +153,7 @@ const StudentActivities = () => {
         </div>
       </motion.div>
 
+      {/* Image Modal */}
       {selectedImage && (
         <motion.div
           initial={{ opacity: 0 }}
@@ -128,14 +172,6 @@ const StudentActivities = () => {
             <button
               onClick={() => setSelectedImage(null)}
               className="modal-close-btn"
-              onMouseEnter={(e) => {
-                e.target.style.background = 'rgba(52, 152, 219, 0.4)';
-                e.target.style.transform = 'scale(1.1)';
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.background = 'rgba(52, 152, 219, 0.2)';
-                e.target.style.transform = 'scale(1)';
-              }}
             >
               <FaTimes />
             </button>
