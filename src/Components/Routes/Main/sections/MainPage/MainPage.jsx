@@ -35,7 +35,7 @@ const MainPage = () => {
               <span>Contact me</span>
               <FaArrowRight className="btn-icon" />
             </a>
-            <a href="https://drive.google.com/file/d/1j1OgHYgD21k0HwfD-f5C0zm7-Iw0eXry/view?usp=sharing" className="btn">
+            <a href="https://drive.google.com/file/d/1sGADl2KIJeYzrpbfTjLz-gKVi7PVBeZn/view?usp=sharing" className="btn">
               <span>Download CV</span>
               <FaArrowRight className="btn-icon" />
             </a>
