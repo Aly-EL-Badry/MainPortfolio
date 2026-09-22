@@ -32,6 +32,10 @@ const nlpSequenceModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v17
 const nlpProbabilisticModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/Propalistic_model_vybtf4.png"
 const nlpSpecialization = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054998/NLP_specializiation_uzmfmg.png"
 const nlpAttentionModels = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785054999/Attention_model_uk0ntd.png"
+const aitronix           = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790089661/aitronix_io1juw.png"
+const ibm                = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090135/advanced-finetunning_j1jj8u.png"
+const mcit               = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090276/certificate_dk6heq.jpg"
+const climate            = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090580/Climate_llrymn.jpg"
 
 
 // ─── All Certificates ─────────────────────────────────────────────────────────
@@ -58,6 +62,20 @@ export const certificates = [
       "Understanding data visualization and communication best practices.",
       "Deploying data science solutions and working with cloud platforms.",
       "Completing hands-on projects to build a strong data science portfolio."
+    ]
+  },
+  {
+    img: mcit,
+    alt: "MCIT Summer Training",
+    main: "Data Analysis, BI, Web Development & AI",
+    sub: "From: Ministry of Communications and Information Technology",
+    description: "Successfully completed a 120-hour Summer Training course covering the principles of Data Analysis, Business Intelligence, Web Application Development, and Artificial Intelligence.",
+    takeaways: [
+      "Completed a comprehensive 120-hour summer training program from July 12 to August 9, 2026.",
+      "Studied the core principles of Data Analysis and Business Intelligence.",
+      "Gained foundational knowledge in Web Application Development.",
+      "Explored concepts and practical applications of Artificial Intelligence.",
+      "Certified by the Egyptian Ministry of Communications and Information Technology (MCIT)."
     ]
   },
   {
@@ -255,6 +273,32 @@ export const certificates = [
   },
   // ── AI Development ────────────────────────────────────────────────────────────
   {
+    img: aitronix,
+    alt: "Aitronix",
+    main: "AI Internship",
+    sub: "From: Aitronix",
+    description: "Successfully completed a 120-hour AI Internship at Aitronix, gaining practical experience in various Artificial Intelligence projects.",
+    takeaways: [
+      "Completed a rigorous 120-hour internship program focused on Artificial Intelligence.",
+      "Gained practical, hands-on experience by working on various AI projects.",
+      "Applied theoretical AI concepts to real-world scenarios and practical applications.",
+      "Collaborated on AI initiatives during the internship period from 1/6/2026 to 1/8/2026."
+    ]
+  },
+  {
+    img: ibm,
+    alt: "IBM Coursera",
+    main: "Generative AI Advanced Fine-Tuning for LLMs",
+    sub: "From: IBM & Coursera",
+    description: "Successfully completed an online course authorized by IBM and offered through Coursera focusing on advanced techniques for Generative AI.",
+    takeaways: [
+      "Explored advanced concepts and applications within Generative AI.",
+      "Learned specialized techniques for fine-tuning Large Language Models (LLMs).",
+      "Completed rigorous coursework developed and authorized by IBM.",
+      "Verified learning and skill acquisition through the Coursera platform."
+    ]
+  },
+  {
     img: nlpAttentionModels,
     alt: "Natural Language Processing with Attention Models",
     main: "Natural Language Processing with Attention Models",
@@ -417,6 +461,19 @@ export const certificates = [
   },
   // ── Others ────────────────────────────────────────────────────────────────────
   {
+    img: climate,
+    alt: "EAEA Climate Smart Youth",
+    main: "Climate Smart Youth Training Program",
+    sub: "From: Egyptian Atomic Energy Authority (EAEA)",
+    description: "Recognized for active participation in the Climate Smart Youth training program from September 13-15, 2026, demonstrating a commitment to learning, responsibility, and sustainability.",
+    takeaways: [
+      "Explored core concepts of climate awareness and the growing sector of green jobs.",
+      "Developed practical skills in creative thinking and content creation.",
+      "Learned fundamentals of digital marketing and improved presentation skills.",
+      "Engaged in practices aimed at creating a meaningful impact toward a more sustainable future."
+    ]
+  },
+  {
     img: aice,
     alt: "AICE",
     main: "AI Career Essential",
@@ -508,6 +565,7 @@ export const certificates = [
 
 const importantAlts = [
   'DEPI',
+  'MCIT Summer Training',
   'Natural Language Processing Specialization',
   'Machine Learning in Production',
   'Git',
@@ -528,6 +586,8 @@ const webDevAlts = [
 ];
 
 const aiDevAlts = [
+  'Aitronix',
+  'IBM Coursera',
   'Natural Language Processing with Attention Models',
   'Natural Language Processing with Sequence Models',
   'CrewAI',
