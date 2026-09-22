@@ -7,7 +7,35 @@ const mcit = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090276/cert
 const eaea = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090580/Climate_llrymn.jpg";
 
 
-export const experienceData = [   
+export const experienceData = [
+  {
+    id: "eaea",
+    company: "Egyptian Atomic Energy Authority - EAEA",
+    title: "Software Engineer Intern",
+    duration: "Aug 2026 | On-site",
+    logo: eaea,
+    logoAlt: "EAEA Logo",
+    media: eaea,
+    responsibilities: [
+      "Participated in an on-site software engineering internship developing technical and software solutions.",
+      "Completed the Climate Smart Youth training program exploring sustainability, creative thinking, and green jobs.",
+      "Collaborated on technical practices and initiatives promoting sustainability and environmental awareness."
+    ]
+  },
+  {
+    id: "mcit",
+    company: "Ministry of Communications and Information Technology (MCIT), Egypt",
+    title: "Data Analyst Intern",
+    duration: "Jul 2026 – Aug 2026 | Remote",
+    logo: mcit,
+    logoAlt: "MCIT Logo",
+    media: mcit,
+    responsibilities: [
+      "Completed an intensive 120-hour summer training program covering Data Analysis, Business Intelligence, Web Application Development, and AI.",
+      "Developed interactive dashboards and business intelligence reports utilizing Microsoft Power BI.",
+      "Conducted advanced statistical data analysis and exploratory data modeling using SPSS Statistics."
+    ]
+  },
   {
     id: "lilt",
     company: "LILT AI",
@@ -35,31 +63,17 @@ export const experienceData = [
     ]
   },
   {
-    id: "mcit",
-    company: "Ministry of Communications and Information Technology (MCIT), Egypt",
-    title: "Data Analyst Intern",
-    duration: "Jul 2026 – Aug 2026 | Remote",
-    logo: mcit,
-    logoAlt: "MCIT Logo",
-    media: mcit,
+    id: 3,
+    company: "Outlier",
+    title: "AI Trainee - Part Time",
+    duration: "October 2024 - Present",
+    logo: outlier,
+    logoAlt: "Outlier Logo",
     responsibilities: [
-      "Completed an intensive 120-hour summer training program covering Data Analysis, Business Intelligence, Web Application Development, and AI.",
-      "Developed interactive dashboards and business intelligence reports utilizing Microsoft Power BI.",
-      "Conducted advanced statistical data analysis and exploratory data modeling using SPSS Statistics."
-    ]
-  },
-  {
-    id: "eaea",
-    company: "Egyptian Atomic Energy Authority - EAEA",
-    title: "Software Engineer Intern",
-    duration: "Aug 2026 | On-site",
-    logo: eaea,
-    logoAlt: "EAEA Logo",
-    media: eaea,
-    responsibilities: [
-      "Participated in an on-site software engineering internship developing technical and software solutions.",
-      "Completed the Climate Smart Youth training program exploring sustainability, creative thinking, and green jobs.",
-      "Collaborated on technical practices and initiatives promoting sustainability and environmental awareness."
+      "Working on advanced AI and ML model development",
+      "Implementing cutting-edge AI technologies",
+      "Collaborating with AI professionals on real-world applications",
+      "Learning and optimizing AI methodologies"
     ]
   },
   {
@@ -90,18 +104,4 @@ export const experienceData = [
   //     "Collaborated on complex data-driven challenges"
   //   ]
   // },
-  {
-    id: 3,
-    company: "Outlier",
-    title: "AI Trainee - Part Time",
-    duration: "October 2024 - Present",
-    logo: outlier,
-    logoAlt: "Outlier Logo",
-    responsibilities: [
-      "Working on advanced AI and ML model development",
-      "Implementing cutting-edge AI technologies",
-      "Collaborating with AI professionals on real-world applications",
-      "Learning and optimizing AI methodologies"
-    ]
-  }
 ];
