@@ -5,6 +5,8 @@ const lilt = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785141555/Lilt
 const aitronix = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785143744/aitronix_logo_do3gb7.jpg";
 const mcit = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090276/certificate_dk6heq.jpg";
 const eaea = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090580/Climate_llrymn.jpg";
+const mcitLogo = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790092089/mcit_aym8xi.webp";
+const eaeaLogo = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790092088/eaea_chogg7.jpg";
 
 
 export const experienceData = [
@@ -13,7 +15,7 @@ export const experienceData = [
     company: "Egyptian Atomic Energy Authority - EAEA",
     title: "Software Engineer Intern",
     duration: "Aug 2026 | On-site",
-    logo: eaea,
+    logo: eaeaLogo,
     logoAlt: "EAEA Logo",
     media: eaea,
     responsibilities: [
@@ -27,7 +29,7 @@ export const experienceData = [
     company: "Ministry of Communications and Information Technology (MCIT), Egypt",
     title: "Data Analyst Intern",
     duration: "Jul 2026 – Aug 2026 | Remote",
-    logo: mcit,
+    logo: mcitLogo,
     logoAlt: "MCIT Logo",
     media: mcit,
     responsibilities: [
