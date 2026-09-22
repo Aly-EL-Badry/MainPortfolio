@@ -3,6 +3,8 @@ const h = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1745159824/huawei_
 const outlier = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1749665520/CTA-8_itxtjp.png";
 const lilt = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785141555/Lilt_qs6p5q.webp";
 const aitronix = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1785143744/aitronix_logo_do3gb7.jpg";
+const mcit = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090276/certificate_dk6heq.jpg";
+const eaea = "https://res.cloudinary.com/dqktuc5ej/image/upload/v1790090580/Climate_llrymn.jpg";
 
 
 export const experienceData = [   
@@ -30,6 +32,34 @@ export const experienceData = [
       "Built a LangGraph agent via Facebook Graph API to classify and route user interactions by intent.",
       "Developed a dynamic LlamaIndex RAG system for instant knowledge base updates via document uploads.",
       "Engineered a Dockerized backend (FastAPI, PostgreSQL, Pydantic) to manage order states and automated support tickets."
+    ]
+  },
+  {
+    id: "mcit",
+    company: "Ministry of Communications and Information Technology (MCIT), Egypt",
+    title: "Data Analyst Intern",
+    duration: "Jul 2026 – Aug 2026 | Remote",
+    logo: mcit,
+    logoAlt: "MCIT Logo",
+    media: mcit,
+    responsibilities: [
+      "Completed an intensive 120-hour summer training program covering Data Analysis, Business Intelligence, Web Application Development, and AI.",
+      "Developed interactive dashboards and business intelligence reports utilizing Microsoft Power BI.",
+      "Conducted advanced statistical data analysis and exploratory data modeling using SPSS Statistics."
+    ]
+  },
+  {
+    id: "eaea",
+    company: "Egyptian Atomic Energy Authority - EAEA",
+    title: "Software Engineer Intern",
+    duration: "Aug 2026 | On-site",
+    logo: eaea,
+    logoAlt: "EAEA Logo",
+    media: eaea,
+    responsibilities: [
+      "Participated in an on-site software engineering internship developing technical and software solutions.",
+      "Completed the Climate Smart Youth training program exploring sustainability, creative thinking, and green jobs.",
+      "Collaborated on technical practices and initiatives promoting sustainability and environmental awareness."
     ]
   },
   {
