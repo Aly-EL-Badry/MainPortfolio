@@ -871,6 +871,24 @@
     justify-content: center;
   }
 
+  /* Keep popover inside the viewport on mobile */
+  .pm-team-wrap {
+    position: static;
+  }
+
+  .pm-member-popover {
+    position: fixed;
+    top: auto;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100vw - 2rem);
+    min-width: 0;
+    max-width: 340px;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
+
   .pm-card {
     width: 100%;
     max-width: 100%;
