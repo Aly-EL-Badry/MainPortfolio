@@ -153,6 +153,18 @@
   box-shadow: 0 0 14px rgba(59, 130, 246, 0.2);
 }
 
+.pm-team-chevron {
+  font-size: 0.62rem;
+  color: #60a5fa;
+  transition: transform 0.25s ease;
+  margin-left: 0.15rem;
+  flex-shrink: 0;
+}
+
+.pm-team-chevron.open {
+  transform: rotate(180deg);
+}
+
 .pm-team-avatars {
   display: flex;
   flex-direction: row-reverse;

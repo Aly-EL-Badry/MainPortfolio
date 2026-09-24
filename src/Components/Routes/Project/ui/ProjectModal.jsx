@@ -31,6 +31,7 @@ import {
   FaBolt,
   FaInfoCircle,
   FaCheckCircle,
+  FaChevronDown,
 } from 'react-icons/fa';
 import './ProjectModal.css';
 
@@ -321,6 +322,7 @@ const ProjectModal = ({ selectedProject, closeModal }) => {
                         </div>
                         {extraCount > 0 && <span className="pm-team-extra">+{extraCount}</span>}
                         {p.team?.name && <span className="pm-team-name">{p.team.name}</span>}
+                        <FaChevronDown className={`pm-team-chevron${memberPopoverOpen ? ' open' : ''}`} />
                       </button>
 
                       <AnimatePresence>
