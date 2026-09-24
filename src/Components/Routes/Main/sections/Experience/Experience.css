@@ -12,12 +12,7 @@
 
 .experience-card {
   padding: 0.75rem 0;
-  border-bottom: 1px solid rgba(52, 152, 219, 0.2);
   transition: all 0.3s ease;
-}
-
-.experience-card:last-child {
-  border-bottom: none;
 }
 
 .experience-content {
@@ -133,13 +128,11 @@
     background: rgba(52, 152, 219, 0.05);
     border-radius: 12px;
     padding: 1rem;
-    border: 1px solid rgba(52, 152, 219, 0.1);
     transition: transform 0.3s ease;
   }
 
   .experience-card:hover {
     transform: translateY(-3px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.1);
   }
 
   .experience-content {
@@ -152,8 +145,6 @@
     height: 100px;
     margin: 0 auto 1rem;
     background: rgba(52, 152, 219, 0.15);
-    border: 2px solid rgba(52, 152, 219, 0.2);
-    box-shadow: 0 4px 12px rgba(52, 152, 219, 0.1);
   }
 
   .company-logo img {
