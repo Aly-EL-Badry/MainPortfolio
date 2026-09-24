@@ -871,22 +871,27 @@
     justify-content: center;
   }
 
-  /* Keep popover inside the viewport on mobile */
+  /* Keep popover inside the modal on mobile */
+  .pm-header-meta {
+    position: relative;
+  }
+
   .pm-team-wrap {
     position: static;
   }
 
   .pm-member-popover {
-    position: fixed;
-    top: auto;
-    bottom: 1rem;
-    left: 50%;
-    transform: translateX(-50%);
-    width: calc(100vw - 2rem);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: calc(100% - 1rem);
     min-width: 0;
-    max-width: 340px;
-    max-height: 60vh;
+    max-width: 320px;
+    max-height: 50vh;
     overflow-y: auto;
+    z-index: 200;
   }
 
   .pm-card {
