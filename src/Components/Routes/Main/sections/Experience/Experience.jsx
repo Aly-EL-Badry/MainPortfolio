@@ -10,12 +10,12 @@ const Experience = () => {
       <hr />
       <div className="experience-container">
         {experienceData.map((exp) => (
-          <motion.div 
+          <motion.div
             key={exp.id}
             initial={{ y: 100, opacity: 0 }}
-            whileInView={{ y: 0, opacity: 1 }}  
+            whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, ease: "easeOut" }} 
+            transition={{ duration: 0.6, ease: "easeOut" }}
             className="experience-card"
           >
             <div className="experience-content">
@@ -39,12 +39,12 @@ const Experience = () => {
                 </div>
               </div>
               <div className="company-logo">
-                <motion.img 
-                  src={exp.logo} 
-                  alt={exp.logoAlt} 
-                  initial={{ scale: 0.8, opacity: 0 }} 
-                  whileInView={{ scale: 1, opacity: 1 }} 
-                  viewport={{ once: true }} 
+                <motion.img
+                  src={exp.logo}
+                  alt={exp.logoAlt}
+                  initial={{ scale: 0.8, opacity: 0 }}
+                  whileInView={{ scale: 1, opacity: 1 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5 }}
                 />
               </div>

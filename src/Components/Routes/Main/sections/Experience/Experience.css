@@ -12,10 +12,12 @@
 
 .experience-card {
   padding: 0.75rem 0;
+
   transition: all 0.3s ease;
 }
 
 .experience-content {
+  background: #000;
   display: flex;
   justify-content: space-between;
   gap: 1.5rem;
@@ -226,6 +228,7 @@
       opacity: 0;
       transform: translateY(20px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -233,10 +236,27 @@
   }
 
   /* Add staggered animation delay for each card */
-  .experience-card:nth-child(1) { animation-delay: 0.1s; }
-  .experience-card:nth-child(2) { animation-delay: 0.2s; }
-  .experience-card:nth-child(3) { animation-delay: 0.3s; }
-  .experience-card:nth-child(4) { animation-delay: 0.4s; }
-  .experience-card:nth-child(5) { animation-delay: 0.5s; }
-  .experience-card:nth-child(6) { animation-delay: 0.6s; }
+  .experience-card:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+
+  .experience-card:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+
+  .experience-card:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+
+  .experience-card:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+
+  .experience-card:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+
+  .experience-card:nth-child(6) {
+    animation-delay: 0.6s;
+  }
 }
